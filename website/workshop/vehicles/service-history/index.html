@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Vehicle service log and PDF export | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="View the service log for a vehicle, select individual services, and export them as a combined PDF in Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/service-history/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/vehicles/">Vehicles</a><span class="sep">/</span><span>Service log</span></nav>
+        <h1>Service log &amp; PDF export</h1>
+        <p class="lead">Every service ever performed on a vehicle, viewable and exportable.</p>
+
+        <h2 id="log">The service log</h2>
+        <p>On the vehicle detail page, the <strong>Service history</strong> section lists every service order ever opened for this car &mdash; newest first. Each row shows:</p>
+        <ul>
+          <li>Service date</li>
+          <li>Status (coloured badge)</li>
+          <li>Odometer at time of service</li>
+          <li>Short description</li>
+          <li>Inspection-item count</li>
+          <li>Invoice total (if invoiced)</li>
+        </ul>
+
+        <h2 id="expand">Expanding a service</h2>
+        <p>Click the chevron to preview inspection items and photos without navigating away. Click the row to open the full <a href="/workshop/services/">service page</a>.</p>
+
+        <h2 id="export">Exporting as PDF</h2>
+        <ol>
+          <li>Tick the checkbox next to each service you want to include (or <strong>Select all</strong>).</li>
+          <li>Click <strong>Print selected</strong> in the toolbar that appears.</li>
+          <li>Preview the combined PDF in a new tab.</li>
+          <li>Save or print.</li>
+        </ol>
+
+        <p>The PDF includes, for each selected service:</p>
+        <ul>
+          <li>Service date, status, description, odometer</li>
+          <li>Full inspection-item list, grouped by category</li>
+          <li>A thumbnail grid of attached photos</li>
+          <li>The invoice total if one was issued</li>
+        </ul>
+        <p>At the top, the PDF has the vehicle&rsquo;s full identification block (make, model, year, VIN, plate) and your workshop header.</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Great for handovers</div>
+          <p>Print the full service log when a vehicle is sold to a new owner &mdash; it&rsquo;s a complete, dated record that adds resale value and demonstrates care.</p>
+        </div>
+
+        <h2 id="performance">Performance</h2>
+        <p>The PDF is generated server-side and streamed to your browser. For cars with 50+ services, expect a 5&ndash;15 second wait.</p>
+
+        <div class="pager">
+          <a href="/workshop/vehicles/photos/"><div class="label">&larr; Back</div><div class="title">Photos</div></a>
+          <a href="/workshop/services/" class="next"><div class="label">Next &rarr;</div><div class="title">Services</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

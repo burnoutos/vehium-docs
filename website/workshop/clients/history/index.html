@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Client service history | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Read, filter, and export a client's full service history in Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/history/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Service history</span></nav>
+        <h1>Client service history</h1>
+        <p class="lead">Everything you&rsquo;ve ever done for this client, across every vehicle they own.</p>
+
+        <h2 id="where">Where to find it</h2>
+        <p>On the <a href="/workshop/clients/detail/">client detail page</a>, scroll to <strong>Service history</strong>. It&rsquo;s a paged list, newest first.</p>
+
+        <h2 id="row">What each row shows</h2>
+        <ul>
+          <li>Service date (and completion date if different).</li>
+          <li>Status badge (in progress, waiting for parts, completed, etc.).</li>
+          <li>The vehicle (make, model, plate).</li>
+          <li>Short description.</li>
+          <li>Inspection-item count.</li>
+          <li>A chevron to expand or open the full <a href="/workshop/services/">service page</a>.</li>
+        </ul>
+
+        <h2 id="filters">Filters</h2>
+        <ul>
+          <li><strong>Status</strong> &mdash; narrow by one or multiple.</li>
+          <li><strong>Date range</strong> &mdash; from / to (inclusive).</li>
+          <li><strong>Vehicle</strong> &mdash; if the client has several cars.</li>
+        </ul>
+
+        <h2 id="expand">Expanding a row</h2>
+        <p>Clicking the chevron on a row reveals:</p>
+        <ul>
+          <li>The <strong>inspection items</strong> (categorized).</li>
+          <li>Any <strong>photos</strong> attached.</li>
+          <li>The <strong>invoice</strong> total if one was issued.</li>
+        </ul>
+        <p>For the full editing view, click the row itself.</p>
+
+        <h2 id="export">Exporting the history</h2>
+        <p>Vehium doesn&rsquo;t export client history as a single report today, but you can:</p>
+        <ul>
+          <li>Open each <a href="/workshop/services/">service</a> and export its invoice as PDF.</li>
+          <li>Select multiple rows on a vehicle&rsquo;s page and print them as a <a href="/workshop/vehicles/service-history/">combined service log</a>.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/clients/vehicles/"><div class="label">&larr; Back</div><div class="title">Linking vehicles</div></a>
+          <a href="/workshop/vehicles/" class="next"><div class="label">Next &rarr;</div><div class="title">Vehicles</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Subscription status | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="What each subscription state means in Vehium Workshop and what you can and can't do in each." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/billing/status/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/billing/">Billing</a><span class="sep">/</span><span>Status</span></nav>
+        <h1>Subscription status</h1>
+        <p class="lead">Your account is always in one of four states. This is what each means.</p>
+
+        <h2 id="states">The four states</h2>
+        <table>
+          <tr><th>Status</th><th>Meaning</th><th>What you can do</th></tr>
+          <tr>
+            <td><strong>Trial active</strong></td>
+            <td>You&rsquo;re in your free 7-day window.</td>
+            <td>Everything. All features unlocked.</td>
+          </tr>
+          <tr>
+            <td><strong>Subscription active</strong></td>
+            <td>A paid subscription is running.</td>
+            <td>Everything. All features unlocked.</td>
+          </tr>
+          <tr>
+            <td><strong>Trial ending soon</strong></td>
+            <td>2 days or less left in trial.</td>
+            <td>Everything &mdash; plus a banner reminds you to pick a plan.</td>
+          </tr>
+          <tr>
+            <td><strong>Payment required</strong></td>
+            <td>Trial or subscription expired.</td>
+            <td>Sign in and view existing data. Cannot create or edit records until you subscribe.</td>
+          </tr>
+        </table>
+
+        <h2 id="refresh">Refreshing the status</h2>
+        <p>If you&rsquo;ve just paid but still see <em>Payment required</em>, the Stripe webhook may be a few seconds behind. Click the <strong>Refresh</strong> button next to the status on <strong>Settings &rarr; Billing</strong> to force a re-sync.</p>
+
+        <h2 id="locked">What &ldquo;payment required&rdquo; locks</h2>
+        <ul>
+          <li>Creating or editing <strong>clients, vehicles, services, inspection items, employees, invoices</strong>.</li>
+          <li>Creating or completing <strong>service orders</strong>.</li>
+          <li>Uploading <strong>photos</strong>.</li>
+          <li>Publishing changes to your <a href="/workshop/settings/public-listing/">public listing</a>.</li>
+        </ul>
+
+        <h2 id="still-works">What still works</h2>
+        <ul>
+          <li>Signing in and signing out.</li>
+          <li>Viewing all existing records.</li>
+          <li>Downloading past invoices as PDF.</li>
+          <li>Access to <strong>Settings &rarr; Billing</strong> so you can subscribe again.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/billing/payment/"><div class="label">&larr; Back</div><div class="title">Managing payment</div></a>
+          <a href="/workshop/dashboard/" class="next"><div class="label">Next &rarr;</div><div class="title">Dashboard overview</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

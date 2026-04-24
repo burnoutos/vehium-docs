@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Billing overview | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="How billing works in Vehium Workshop — the 7-day trial, subscription plans, secure payments through Stripe, and managing your billing state." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/billing/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><span>Billing</span></nav>
+        <h1>Billing</h1>
+        <p class="lead">Everything about paying for Vehium Workshop — trial, plans, payment methods, and subscription state.</p>
+
+        <h2 id="how-it-works">How billing works</h2>
+        <p>Vehium Workshop is a subscription. Every new account starts with a <strong>free 7-day trial</strong> that unlocks every feature. At the end of the trial, you pick a plan and pay with a credit/debit card through Stripe.</p>
+
+        <div class="card-grid">
+          <a class="doc-card" href="/workshop/billing/trial/"><h3>Your 7-day trial</h3><p>How it starts, what it unlocks, when it ends.</p></a>
+          <a class="doc-card" href="/workshop/billing/subscription/"><h3>Subscription &amp; plans</h3><p>Picking a plan and what each includes.</p></a>
+          <a class="doc-card" href="/workshop/billing/payment/"><h3>Managing payment</h3><p>Change the card on file, view invoices.</p></a>
+          <a class="doc-card" href="/workshop/billing/status/"><h3>Subscription status</h3><p>Trial, active, and payment-required states.</p></a>
+        </div>
+
+        <h2 id="stripe">Payments &amp; Stripe</h2>
+        <p>Vehium uses <a href="https://stripe.com" rel="nofollow noopener">Stripe</a> to process payments. When you pick a plan, you&rsquo;re redirected to Stripe&rsquo;s hosted checkout &mdash; we never see or store your card number. Stripe is PCI-DSS Level 1 certified, the strictest compliance level in the industry.</p>
+
+        <h2 id="currencies">Currencies &amp; tax</h2>
+        <p>Prices are shown in your local currency where supported. VAT is added automatically for eligible regions based on your billing address. All invoices include a VAT breakdown for your records.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Need help?</div>
+          <p>Billing questions or trouble charging your card? Email <a href="mailto:info@vehium.com">info@vehium.com</a> with your account email and we&rsquo;ll respond within one business day.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/account/"><div class="label">&larr; Back</div><div class="title">Account</div></a>
+          <a href="/workshop/billing/trial/" class="next"><div class="label">Next &rarr;</div><div class="title">Your 7-day trial</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

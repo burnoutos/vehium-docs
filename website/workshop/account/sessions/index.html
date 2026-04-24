@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Sign out of Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="How to sign out of the Vehium Workshop app and what happens when you do." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/account/sessions/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/account/">Account</a><span class="sep">/</span><span>Sign out</span></nav>
+        <h1>Sign out</h1>
+        <p class="lead">End your session on the current device.</p>
+
+        <h2 id="how">How to sign out</h2>
+        <ol>
+          <li>Click your avatar in the top-right of the app.</li>
+          <li>Choose <strong>Sign out</strong> from the menu. A confirmation dialog appears.</li>
+          <li>Click <strong>Sign out</strong> to confirm.</li>
+        </ol>
+        <p>The app returns to the login screen and your authentication tokens are discarded.</p>
+
+        <h2 id="other-devices">Sessions on other devices</h2>
+        <p>Signing out only affects the current device. Your session on other browsers, phones, and the desktop app stays active. To sign out everywhere:</p>
+        <ol>
+          <li>Change your <a href="/workshop/account/password/">password</a> (this invalidates refresh tokens on other devices within a few minutes).</li>
+          <li>Sign out of each active device individually.</li>
+        </ol>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Shared device?</div>
+          <p>Always sign out on a shared or public computer. Your session would otherwise persist in the browser&rsquo;s local storage until it expires or someone else signs in.</p>
+        </div>
+
+        <h2 id="auto-expiry">Automatic sign-out</h2>
+        <p>For security, Vehium tokens rotate on a schedule. If you leave the app idle for a long time, you&rsquo;ll be prompted to sign in again when you return &mdash; usually after about two weeks of inactivity, or immediately if you revoke tokens on the server side.</p>
+
+        <div class="pager">
+          <a href="/workshop/account/appearance/"><div class="label">&larr; Back</div><div class="title">Theme &amp; language</div></a>
+          <a href="/workshop/billing/" class="next"><div class="label">Next &rarr;</div><div class="title">Billing overview</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

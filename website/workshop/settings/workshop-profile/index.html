@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Workshop profile | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Your business identity in Vehium Workshop — company name, VAT, address, phone, logo. All of it flows onto invoices." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/settings/workshop-profile/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/settings/">Settings</a><span class="sep">/</span><span>Workshop profile</span></nav>
+        <h1>Workshop profile</h1>
+        <p class="lead">Your business identity. Fill this in first &mdash; it flows onto every invoice and into your public listing.</p>
+
+        <h2 id="fields">Fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+          <tr><td>Company name</td><td>Yes</td><td>As it should appear on invoices.</td></tr>
+          <tr><td>Company email</td><td>Yes</td><td>Shown on invoices; used as reply-to for customer messages.</td></tr>
+          <tr><td>VAT number</td><td>Optional</td><td>Printed on invoices where applicable.</td></tr>
+          <tr><td>Phone</td><td>Optional</td><td>On invoices and your public listing.</td></tr>
+          <tr><td>Description</td><td>Optional</td><td>A one-paragraph blurb for your public listing.</td></tr>
+          <tr><td>Street address</td><td>Optional</td><td>Printed on invoices.</td></tr>
+          <tr><td>City / state / postal code / country</td><td>Optional</td><td>Driving directions in the customer app use these.</td></tr>
+          <tr><td>Logo</td><td>Optional</td><td>PNG, JPEG, or SVG. Square crop recommended (at least 512&times;512). Max 2 MB.</td></tr>
+        </table>
+
+        <h2 id="units">Units</h2>
+        <ul>
+          <li><strong>Odometer units</strong> &mdash; kilometres or miles. Applies everywhere odometer is shown.</li>
+          <li><strong>Currency</strong> &mdash; detected from your country but overridable.</li>
+          <li><strong>Default VAT rate</strong> &mdash; pre-fills the VAT% on new invoice lines.</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Changes apply everywhere</div>
+          <p>Edits to the workshop profile update every <em>future</em> invoice instantly. Past invoices are immutable &mdash; so if you correct your company name, old invoices keep the old name (which matches most tax authority expectations).</p>
+        </div>
+
+        <h2 id="save">Saving</h2>
+        <p>Click <strong>Save</strong> at the bottom. A green toast confirms the update.</p>
+
+        <div class="pager">
+          <a href="/workshop/settings/"><div class="label">&larr; Back</div><div class="title">Settings</div></a>
+          <a href="/workshop/settings/work-hours/" class="next"><div class="label">Next &rarr;</div><div class="title">Work hours</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Install Vehium Workshop on macOS | Vehium Docs</title>
+    <meta name="description" content="Install Vehium Workshop on macOS with the signed DMG." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/desktop/install-macos/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/desktop/">Desktop</a><span class="sep">/</span><span>macOS</span></nav>
+        <h1>Install on macOS</h1>
+        <p class="lead">Runs on Apple Silicon and Intel Macs.</p>
+
+        <h2 id="requirements">Requirements</h2>
+        <ul>
+          <li>macOS 11 Big Sur or later.</li>
+          <li>Approximately <strong>350 MB</strong> free disk space.</li>
+          <li>An internet connection for sign-in.</li>
+        </ul>
+
+        <h2 id="download">Download</h2>
+        <ol>
+          <li>Open <a href="https://vehium.com/#download">vehium.com/#download</a>.</li>
+          <li>Click <strong>Download for macOS</strong>. The file is a signed <code>.dmg</code> (~120 MB).</li>
+        </ol>
+
+        <h2 id="install">Install</h2>
+        <ol>
+          <li>Double-click the downloaded DMG.</li>
+          <li>Drag the <strong>Vehium Workshop</strong> app icon into the <strong>Applications</strong> folder.</li>
+          <li>Eject the DMG (click the eject icon next to it in Finder).</li>
+        </ol>
+
+        <h2 id="first-launch">First launch</h2>
+        <ol>
+          <li>Open <strong>Applications</strong> and double-click <strong>Vehium Workshop</strong>.</li>
+          <li>macOS may show &ldquo;&lsquo;Vehium Workshop&rsquo; is an app downloaded from the Internet&rdquo; &mdash; click <strong>Open</strong>. This prompt appears only on the first launch.</li>
+          <li>Sign in with your Vehium username and password.</li>
+        </ol>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Gatekeeper</div>
+          <p>The app is signed and notarized, so Gatekeeper won&rsquo;t block it. If you see a hard &ldquo;cannot be opened&rdquo; error, the download may have been truncated &mdash; re-download the DMG.</p>
+        </div>
+
+        <h2 id="updates">Updates</h2>
+        <p>Same auto-update behaviour as the Windows build: check on launch, install in the background, prompt to restart.</p>
+
+        <h2 id="uninstall">Uninstall</h2>
+        <p>Drag <strong>Vehium Workshop</strong> from <strong>Applications</strong> to the Trash. Empty the Trash to complete removal. User preferences remain in <code>~/Library/Application Support/Vehium</code>; delete that folder to wipe everything.</p>
+
+        <div class="pager">
+          <a href="/workshop/desktop/install-windows/"><div class="label">&larr; Back</div><div class="title">Windows</div></a>
+          <a href="/workshop/desktop/troubleshooting/" class="next"><div class="label">Next &rarr;</div><div class="title">Desktop troubleshooting</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

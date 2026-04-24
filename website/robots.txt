@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Hide internal partial fragments — they are stitched into pages via SSI
+Disallow: /_partials/
+
+Sitemap: https://docs.vehium.com/sitemap.xml
+
+# AI-crawler hints
+# /llms.txt       — site summary with links to all major pages
+# /llms-full.txt  — full documentation concatenated as Markdown

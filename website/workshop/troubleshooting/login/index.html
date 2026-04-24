@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Can't sign in | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Fix sign-in problems with Vehium Workshop — forgotten passwords, expired reset links, locked accounts." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/troubleshooting/login/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/troubleshooting/">Troubleshooting</a><span class="sep">/</span><span>Can&rsquo;t sign in</span></nav>
+        <h1>Can&rsquo;t sign in</h1>
+        <p class="lead">Solutions for the most common login problems.</p>
+
+        <h2 id="forgot">Forgot your password</h2>
+        <ol>
+          <li>On the login screen, click <strong>Forgot password</strong>.</li>
+          <li>Enter your account email address.</li>
+          <li>Wait 1&ndash;2 minutes for the reset email.</li>
+          <li>Click the link in the email and set a new password (rules: 12+ characters with upper, lower, digit, symbol).</li>
+        </ol>
+
+        <h2 id="reset-expired">Reset link expired</h2>
+        <p>Reset links are valid for <strong>15 minutes</strong>. If yours expired, request a new one &mdash; there&rsquo;s no limit on how many you can send.</p>
+
+        <h2 id="no-email">Reset email didn&rsquo;t arrive</h2>
+        <ul>
+          <li>Check spam / junk. Allowlist <code>no-reply@vehium.com</code>.</li>
+          <li>Try again &mdash; occasionally a corporate filter swallows the first email.</li>
+          <li>Make sure you entered the correct email (typos are surprisingly common).</li>
+          <li>Email <a href="mailto:info@vehium.com">info@vehium.com</a> from a different account you can access.</li>
+        </ul>
+
+        <h2 id="username-wrong">Username not recognized</h2>
+        <p>Try signing in with your <strong>email</strong> instead &mdash; Vehium accepts either username or email. If neither works, your account may have been created under a different address than you remember. Contact support.</p>
+
+        <h2 id="account-locked">Account locked</h2>
+        <p>After 10 failed sign-in attempts in a short window, an account is temporarily locked for 15 minutes. Wait and try again &mdash; or trigger a password reset, which also lifts the lock.</p>
+
+        <h2 id="employee">Employee locked out by admin</h2>
+        <p>If an admin disabled your employee account or removed all your roles, you&rsquo;ll see <em>&ldquo;Access denied&rdquo;</em>. Ask the admin to restore your roles from the Employees page.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Two-factor authentication</div>
+          <p>Vehium plans to offer optional 2FA in a future release. Today, protect your account by using a unique, strong password and a password manager.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/troubleshooting/"><div class="label">&larr; Back</div><div class="title">Troubleshooting</div></a>
+          <a href="/workshop/troubleshooting/payment/" class="next"><div class="label">Next &rarr;</div><div class="title">Payment issues</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

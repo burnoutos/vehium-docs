@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Linking vehicles to clients | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="How to attach vehicles to a client record in Vehium Workshop, support for multiple owners, and how unlinking works." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/vehicles/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Linking vehicles</span></nav>
+        <h1>Linking vehicles to clients</h1>
+        <p class="lead">Every vehicle can belong to one or more clients. Here&rsquo;s how to wire that up.</p>
+
+        <h2 id="why">Why it matters</h2>
+        <p>Linking vehicles to clients lets Vehium:</p>
+        <ul>
+          <li>Show the <em>client</em>&rsquo;s full service history across all their cars.</li>
+          <li>Show the <em>vehicle</em>&rsquo;s owner(s) on its detail page and on every invoice.</li>
+          <li>Sync the vehicle to the Vehium customer app, so the vehicle owner can see their car.</li>
+        </ul>
+
+        <h2 id="add-existing">Link an existing vehicle</h2>
+        <ol>
+          <li>Open the client&rsquo;s detail page.</li>
+          <li>Scroll to the <strong>Vehicles</strong> section.</li>
+          <li>Click <strong>+ Link vehicle</strong>.</li>
+          <li>Search the picker by license plate, VIN, or make/model.</li>
+          <li>Select the vehicle &mdash; it&rsquo;s linked immediately.</li>
+        </ol>
+
+        <h2 id="create-inline">Create a new vehicle inline</h2>
+        <ol>
+          <li>In the same <strong>+ Link vehicle</strong> picker, click <strong>Create new vehicle</strong>.</li>
+          <li>The standard <a href="/workshop/vehicles/add/">add-vehicle form</a> opens, with this client already selected as owner.</li>
+          <li>Fill in the details and save. The new vehicle is linked automatically.</li>
+        </ol>
+
+        <h2 id="multi-owner">Multiple owners</h2>
+        <p>A vehicle can be linked to multiple clients &mdash; useful for family-owned cars or shared fleet vehicles. On the <a href="/workshop/vehicles/detail/">vehicle detail page</a>, the <strong>Owners</strong> section lists every linked client. Add or remove owners from either side (client page or vehicle page).</p>
+
+        <h2 id="unlink">Unlinking</h2>
+        <p>Click the <strong>Unlink</strong> icon next to the vehicle on the client&rsquo;s detail page. This removes the ownership link only &mdash; the vehicle record, its service history, and any invoices are preserved.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Tip</div>
+          <p>If a vehicle changes hands, unlink the old owner and link the new one. Past services stay with the vehicle, so the new owner can still see a complete history (which is how Vehium&rsquo;s service-log PDF export works).</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/clients/detail/"><div class="label">&larr; Back</div><div class="title">Client detail</div></a>
+          <a href="/workshop/clients/history/" class="next"><div class="label">Next &rarr;</div><div class="title">Service history</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

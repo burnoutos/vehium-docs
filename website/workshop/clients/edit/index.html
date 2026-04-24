@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Edit or delete a client | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Update an existing client's details or remove them from Vehium Workshop, with safety rules around deletion." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/edit/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Edit &amp; delete</span></nav>
+        <h1>Edit or delete a client</h1>
+        <p class="lead">How to keep client records up to date, and how to remove one safely.</p>
+
+        <h2 id="edit">Edit</h2>
+        <ol>
+          <li>Open the <a href="/workshop/clients/detail/">client&rsquo;s detail page</a>.</li>
+          <li>Click the <strong>Edit</strong> button in the header card.</li>
+          <li>The same form you used to add the client opens, pre-filled with current values.</li>
+          <li>Make your changes and click <strong>Save</strong>.</li>
+        </ol>
+
+        <p>Edits are applied everywhere: client list, service history, invoices referencing this client, and the linked customer app.</p>
+
+        <h2 id="delete">Delete</h2>
+        <ol>
+          <li>Open the <a href="/workshop/clients/detail/">client&rsquo;s detail page</a>.</li>
+          <li>Click the <strong>Delete</strong> button in the header card.</li>
+          <li>Confirm the action in the dialog.</li>
+        </ol>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">What deletion does</div>
+          <p>Deleting a client <strong>unlinks</strong> them from any vehicles and past services. The vehicles and services remain in the system (so revenue history is preserved) but show <em>Owner removed</em>. This is irreversible &mdash; consider editing the record instead if you just want to correct bad data.</p>
+        </div>
+
+        <h2 id="alternatives">Alternatives to deletion</h2>
+        <ul>
+          <li><strong>Merge duplicates:</strong> if the same client exists twice, keep the better one and delete the other. Vehium doesn&rsquo;t have an auto-merge &mdash; re-link the vehicles manually before deleting.</li>
+          <li><strong>Archive:</strong> there is no explicit archive flag, but you can prefix the last name with <code>[INACTIVE]</code> to push them to the bottom of searches without losing data.</li>
+        </ul>
+
+        <h2 id="history">Viewing deletion history</h2>
+        <p>Deletions are logged internally for 30 days. If you need a record restored within that window, email <a href="mailto:info@vehium.com">info@vehium.com</a> with the client&rsquo;s full name and approximate deletion date.</p>
+
+        <div class="pager">
+          <a href="/workshop/clients/add/"><div class="label">&larr; Back</div><div class="title">Add a client</div></a>
+          <a href="/workshop/clients/search/" class="next"><div class="label">Next &rarr;</div><div class="title">Search &amp; filter</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Revenue and activity charts | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Read the revenue trend line, vehicle brand distribution, and top clients chart on the Vehium Workshop dashboard." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/dashboard/charts/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/dashboard/">Dashboard</a><span class="sep">/</span><span>Charts</span></nav>
+        <h1>Revenue &amp; activity charts</h1>
+        <p class="lead">How to read the three visual widgets on the dashboard.</p>
+
+        <h2 id="revenue">30-day revenue line chart</h2>
+        <p>A line chart plotting <strong>gross</strong> revenue per day for the last 30 days. Hover (or long-press on mobile) a point to see that day&rsquo;s exact net, VAT, and gross.</p>
+        <ul>
+          <li>Missing days (no invoices) render as <code>0</code>.</li>
+          <li>The accent-coloured area beneath the line gives a sense of volume.</li>
+          <li>Refunds and voids reduce the day&rsquo;s revenue.</li>
+        </ul>
+
+        <h2 id="brands">Vehicle brands pie</h2>
+        <p>A pie chart showing the share of your customer base by make (Toyota, Ford, BMW, &hellip;). Useful for deciding what tools or spares to stock.</p>
+        <p>Two switch modes:</p>
+        <ul>
+          <li><strong>By count</strong> &mdash; number of vehicles per brand.</li>
+          <li><strong>By service volume</strong> &mdash; weights brands by how many services each vehicle has had.</li>
+        </ul>
+
+        <h2 id="top-clients">Top clients</h2>
+        <p>A ranked list of clients by total services this year. Click any name to jump to their <a href="/workshop/clients/detail/">detail page</a>.</p>
+
+        <h2 id="activity">Recent activity feed</h2>
+        <p>The last ten events across every area &mdash; new clients, new vehicles, service status changes, invoice creation. Each row links to the underlying record.</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Tip</div>
+          <p>Use the activity feed during a morning huddle &mdash; it&rsquo;s a good way to see what your team did overnight without poking around individual records.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/dashboard/metrics/"><div class="label">&larr; Back</div><div class="title">Metrics</div></a>
+          <a href="/workshop/dashboard/quick-actions/" class="next"><div class="label">Next &rarr;</div><div class="title">Quick actions</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Notifications | Vehium Docs</title>
+    <meta name="description" content="Control push and email notifications in the Vehium customer app. Get updates on service status, MOT reminders, and photos." />
+    <link rel="canonical" href="https://docs.vehium.com/customer/notifications/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-customer.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/customer/">Customer app</a><span class="sep">/</span><span>Notifications</span></nav>
+        <h1>Notifications</h1>
+        <p class="lead">Get the right update at the right time &mdash; without being spammed.</p>
+
+        <h2 id="what">What we notify you about</h2>
+        <table>
+          <tr><th>Event</th><th>Push</th><th>Email</th></tr>
+          <tr><td>A service is scheduled for your vehicle</td><td>Yes</td><td>No</td></tr>
+          <tr><td>The workshop starts the service</td><td>Yes</td><td>No</td></tr>
+          <tr><td>The workshop completes the service</td><td>Yes</td><td>Yes (with invoice link)</td></tr>
+          <tr><td>The workshop adds photos or notes</td><td>Yes</td><td>No</td></tr>
+          <tr><td>MOT expires in 30 days</td><td>Yes</td><td>No</td></tr>
+          <tr><td>MOT expires in 7 days</td><td>Yes</td><td>No</td></tr>
+          <tr><td>MOT expires in 3 days</td><td>No</td><td>Yes</td></tr>
+          <tr><td>A new workshop pairs with you</td><td>Yes</td><td>Yes</td></tr>
+        </table>
+
+        <h2 id="enable">Enable push notifications</h2>
+        <h3>iOS</h3>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-title">Open iPhone Settings</div>
+            <p>Scroll down to <em>Vehium</em> in the apps list.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Allow notifications</div>
+            <p>Tap <em>Notifications</em>, then turn on <em>Allow Notifications</em>.</p>
+          </li>
+        </ol>
+        <h3>Android</h3>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-title">Open Android Settings</div>
+            <p>Go to <em>Settings &rarr; Apps &rarr; Vehium</em>.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Enable notifications</div>
+            <p>Tap <em>Notifications</em> and enable.</p>
+          </li>
+        </ol>
+        <h3>Web</h3>
+        <p>The first time you open <a href="https://customer.vehium.com">customer.vehium.com</a> in a browser, you&rsquo;ll be asked for notification permission. If you missed it, click the lock icon in your address bar and re-enable notifications.</p>
+
+        <h2 id="fine-tune">Fine-tune which categories you get</h2>
+        <p>In the app, go to <em>Settings &rarr; Notifications</em>. You can switch each category on or off independently:</p>
+        <ul>
+          <li>Service updates (scheduled / started / completed).</li>
+          <li>Photos and notes.</li>
+          <li>MOT reminders.</li>
+          <li>Workshop pairing.</li>
+        </ul>
+
+        <h2 id="quiet">Quiet hours</h2>
+        <p>You can set a quiet window (e.g. 10&nbsp;pm &ndash; 7&nbsp;am) during which push notifications are delivered silently. Emails are unaffected.</p>
+
+        <div class="pager">
+          <a href="/customer/account/"><div class="label">&larr; Back</div><div class="title">Account</div></a>
+          <a href="/customer/troubleshooting/" class="next"><div class="label">Next &rarr;</div><div class="title">Troubleshooting</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

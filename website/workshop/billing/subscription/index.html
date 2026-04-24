@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Subscription and plans | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Pick a Vehium Workshop subscription plan and switch between plans as your workshop grows." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/billing/subscription/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/billing/">Billing</a><span class="sep">/</span><span>Subscription</span></nav>
+        <h1>Subscription &amp; plans</h1>
+        <p class="lead">Compare plans and pick the one that matches your workshop.</p>
+
+        <h2 id="compare">Comparing plans</h2>
+        <p>The live plan cards in <strong>Settings &rarr; Billing</strong> show current pricing for your region, including any promotional discounts. The canonical pricing page lives at <a href="https://vehium.com/#pricing">vehium.com/#pricing</a>.</p>
+
+        <h2 id="pick">Pick a plan</h2>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Review the plan cards (features, monthly price, user seats).</li>
+          <li>Click <strong>Choose plan</strong> on the one you want.</li>
+          <li>You&rsquo;re redirected to <strong>Stripe checkout</strong> in a new tab.</li>
+          <li>Enter your card, confirm your billing address, and submit.</li>
+          <li>Stripe redirects you back to Vehium. The page shows <em>Subscription active</em>.</li>
+        </ol>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Secure checkout</div>
+          <p>Card details are entered and stored on Stripe&rsquo;s side. Vehium only receives a token that represents the subscription &mdash; we never see the card number.</p>
+        </div>
+
+        <h2 id="upgrade">Upgrading and downgrading</h2>
+        <p>To switch plans:</p>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Click <strong>Change plan</strong> next to your current subscription.</li>
+          <li>Pick the new plan.</li>
+          <li>Confirm the proration on the summary screen &mdash; upgrading charges the difference immediately; downgrading credits the difference to your next invoice.</li>
+        </ol>
+
+        <h2 id="cancel">Cancelling</h2>
+        <p>You can cancel any time from <strong>Settings &rarr; Billing &rarr; Manage subscription</strong>. The subscription stays active through the paid-through date, then moves to <strong>Payment required</strong>. Data is preserved as described in <a href="/workshop/billing/trial/">the trial article</a>.</p>
+
+        <h2 id="invoices">Invoices &amp; receipts</h2>
+        <p>After every successful charge Stripe emails you a receipt. You can also download a PDF invoice for any past charge from <strong>Settings &rarr; Billing &rarr; Invoices</strong>.</p>
+
+        <div class="pager">
+          <a href="/workshop/billing/trial/"><div class="label">&larr; Back</div><div class="title">Your 7-day trial</div></a>
+          <a href="/workshop/billing/payment/" class="next"><div class="label">Next &rarr;</div><div class="title">Managing payment</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

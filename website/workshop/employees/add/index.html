@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Add an employee | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Create a new employee login in Vehium Workshop — username, password, and roles." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/employees/add/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/employees/">Employees</a><span class="sep">/</span><span>Add</span></nav>
+        <h1>Add an employee</h1>
+        <p class="lead">Give a teammate their own login.</p>
+
+        <h2 id="how">How to open the form</h2>
+        <ul>
+          <li><strong>Employees page</strong> &rarr; <strong>+ New employee</strong>.</li>
+          <li><strong>Dashboard</strong> &rarr; <strong>New employee</strong> quick action.</li>
+        </ul>
+
+        <h2 id="fields">Fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+          <tr><td>Username</td><td>Yes</td><td>Alphanumeric, no spaces. Used to log in.</td></tr>
+          <tr><td>Password</td><td>Yes</td><td>Set an initial password; the employee can change it after first login. Same 12-char rule as your own password.</td></tr>
+          <tr><td>First name</td><td>Yes</td><td>Shown on activity feed and invoices.</td></tr>
+          <tr><td>Last name</td><td>Yes</td><td>&nbsp;</td></tr>
+          <tr><td>Email</td><td>Yes</td><td>Where password-reset links go.</td></tr>
+          <tr><td>Phone</td><td>Optional</td><td>&nbsp;</td></tr>
+          <tr><td>Home number</td><td>Optional</td><td>&nbsp;</td></tr>
+          <tr><td>Roles</td><td>Yes</td><td>At least one; multi-select. See <a href="/workshop/employees/roles/">Roles &amp; permissions</a>.</td></tr>
+        </table>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Tell them the username + password</div>
+          <p>Vehium doesn&rsquo;t automatically email new employees their credentials. Share the username and initial password through a secure channel (in person, signal, 1Password share) and ask them to change the password on first login.</p>
+        </div>
+
+        <h2 id="after">After saving</h2>
+        <p>The employee appears in the Employees list. They can sign in immediately at <a href="https://app.vehium.com">app.vehium.com</a> or any Vehium app on any device with the username/password you provided. First-login prompts them to change the password.</p>
+
+        <div class="pager">
+          <a href="/workshop/employees/"><div class="label">&larr; Back</div><div class="title">Employees</div></a>
+          <a href="/workshop/employees/roles/" class="next"><div class="label">Next &rarr;</div><div class="title">Roles &amp; permissions</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

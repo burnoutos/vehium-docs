@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Desktop troubleshooting | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Solutions to common Vehium Workshop desktop-app issues — install errors, blank window, auto-update failures." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/desktop/troubleshooting/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/desktop/">Desktop</a><span class="sep">/</span><span>Troubleshooting</span></nav>
+        <h1>Desktop troubleshooting</h1>
+        <p class="lead">Fixes for the most common issues.</p>
+
+        <h2 id="install-fails">Installer won&rsquo;t run</h2>
+        <ul>
+          <li><strong>SmartScreen warning (Windows):</strong> click <em>More info &rarr; Run anyway</em>. The installer is signed.</li>
+          <li><strong>Gatekeeper block (macOS):</strong> the DMG may be corrupted &mdash; re-download. If it still fails, right-click the app &rarr; <em>Open</em> to bypass the warning.</li>
+          <li><strong>Not enough disk space:</strong> free up 500 MB and try again.</li>
+        </ul>
+
+        <h2 id="blank-window">App opens with a blank window</h2>
+        <ul>
+          <li>Check your internet &mdash; the desktop app needs connectivity to sign in.</li>
+          <li>Close the app, reopen it. If still blank after 30 seconds, restart your PC.</li>
+          <li>If a corporate firewall blocks outbound TLS to <code>*.vehium.com</code>, whitelist those hosts.</li>
+        </ul>
+
+        <h2 id="update-fails">Auto-update fails</h2>
+        <ul>
+          <li>Quit and relaunch the app to retry.</li>
+          <li>If it keeps failing, download the fresh installer from <a href="https://vehium.com/#download">vehium.com/#download</a> and reinstall over the top &mdash; your data is in the cloud, nothing is lost.</li>
+        </ul>
+
+        <h2 id="high-cpu">High CPU usage</h2>
+        <p>A single Vehium window should sit well under 5% CPU at idle. If you see high CPU:</p>
+        <ul>
+          <li>Check the dashboard auto-refresh interval &mdash; if network is flaky, retries can spike CPU.</li>
+          <li>Try closing other Electron apps (Slack, VS Code, Teams) &mdash; GPU contention can surface on older Macs.</li>
+          <li>Update to the latest version.</li>
+        </ul>
+
+        <h2 id="logs">Grabbing logs for support</h2>
+        <p>If you email <a href="mailto:info@vehium.com">info@vehium.com</a>, attach the app log. Find it at:</p>
+        <ul>
+          <li><strong>Windows:</strong> <code>%APPDATA%\Vehium\logs\main.log</code></li>
+          <li><strong>macOS:</strong> <code>~/Library/Application Support/Vehium/logs/main.log</code></li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/desktop/install-macos/"><div class="label">&larr; Back</div><div class="title">macOS</div></a>
+          <a href="/workshop/troubleshooting/" class="next"><div class="label">Next &rarr;</div><div class="title">General troubleshooting</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

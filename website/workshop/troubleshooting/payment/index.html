@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Payment issues | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Fix failed charges, update your card, and request refunds in Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/troubleshooting/payment/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/troubleshooting/">Troubleshooting</a><span class="sep">/</span><span>Payment</span></nav>
+        <h1>Payment issues</h1>
+        <p class="lead">Fixes for the most common billing problems.</p>
+
+        <h2 id="charge-failed">A charge failed</h2>
+        <p>Stripe notifies you by email when a recurring charge fails. You have up to 3 retries over ~7 days before your subscription lapses. To fix it:</p>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Click <strong>Manage subscription</strong> &mdash; this opens Stripe&rsquo;s customer portal.</li>
+          <li>Pay the outstanding invoice from the portal, or update the card and Stripe will retry automatically.</li>
+        </ol>
+
+        <h2 id="change-card">Change the card on file</h2>
+        <ol>
+          <li><strong>Settings &rarr; Billing &rarr; Manage subscription</strong>.</li>
+          <li>In the portal, click <strong>Add payment method</strong>.</li>
+          <li>Enter the new card and save. Set it as default.</li>
+          <li>Optionally remove the old card.</li>
+        </ol>
+
+        <h2 id="payment-required">Account stuck in &ldquo;Payment required&rdquo;</h2>
+        <p>If you&rsquo;ve just paid but the UI still says <em>Payment required</em>:</p>
+        <ol>
+          <li>Click the <strong>Refresh</strong> button next to the status on <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Wait a minute and reload. Stripe webhooks usually arrive in seconds but occasionally lag.</li>
+          <li>If still stuck after 10 minutes, email support with your Stripe receipt number.</li>
+        </ol>
+
+        <h2 id="refund">Request a refund</h2>
+        <p>We issue refunds in line with the <a href="https://vehium.com/tos.html">terms of service</a>. Email <a href="mailto:info@vehium.com">info@vehium.com</a> from the account email, cite the charge date and amount, and explain the reason. Refunds are typically processed within 2 business days and returned to the original payment method.</p>
+
+        <h2 id="vat">VAT number missing from invoice</h2>
+        <ol>
+          <li>Go to <strong>Settings &rarr; Workshop profile</strong>.</li>
+          <li>Add your VAT number and save.</li>
+          <li>On the next invoice, VAT will appear correctly.</li>
+          <li>For past invoices, contact support to have them re-issued with the VAT number.</li>
+        </ol>
+
+        <div class="pager">
+          <a href="/workshop/troubleshooting/login/"><div class="label">&larr; Back</div><div class="title">Can&rsquo;t sign in</div></a>
+          <a href="/workshop/troubleshooting/missing-data/" class="next"><div class="label">Next &rarr;</div><div class="title">Missing data</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

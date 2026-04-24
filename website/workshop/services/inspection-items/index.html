@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Inspection items | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Add, edit, and organize inspection items on service orders in Vehium Workshop — categories, custom items, and deletion rules." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/services/inspection-items/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Inspection items</span></nav>
+        <h1>Inspection items</h1>
+        <p class="lead">The granular checklist that makes up the work on a service order. Each item represents a single thing you inspected or replaced.</p>
+
+        <h2 id="structure">How items are organized</h2>
+        <p>Items are grouped by <strong>category</strong>. Default categories include:</p>
+        <ul>
+          <li>Brakes</li>
+          <li>Engine</li>
+          <li>Transmission</li>
+          <li>Suspension</li>
+          <li>Electrical</li>
+          <li>Body &amp; Interior</li>
+          <li>Tyres &amp; Wheels</li>
+          <li>Other</li>
+        </ul>
+        <p>You can add custom categories from the <strong>Manage catalog</strong> dialog.</p>
+
+        <h2 id="add-individual">Add an individual item</h2>
+        <ol>
+          <li>On the service page, click <strong>+ Add item</strong> in the Inspection items section.</li>
+          <li>Pick a category.</li>
+          <li>Search the catalog (<code>brake pad</code>, <code>oil filter</code>, etc.) or click <strong>Custom item</strong>.</li>
+          <li>Give the item a short description and save.</li>
+        </ol>
+
+        <h2 id="custom-items">Custom items</h2>
+        <p>Any custom item you create is saved under the chosen category for future reuse. Rename or delete custom items from <strong>Manage catalog</strong>. Deletion is blocked if the item is used in other services &mdash; the dialog tells you which ones.</p>
+
+        <h2 id="per-item">Editing each item on a service</h2>
+        <p>For every item on the service, you can set:</p>
+        <ul>
+          <li><strong>Condition / status</strong> &mdash; e.g. <em>OK</em>, <em>Advisory</em>, <em>Replaced</em>, <em>Urgent</em>.</li>
+          <li><strong>Notes</strong> &mdash; free text observations.</li>
+        </ul>
+        <p>Changes save automatically &mdash; no explicit save button.</p>
+
+        <h2 id="bulk">Adding items in bulk</h2>
+        <p>Use <a href="/workshop/services/templates/">pre-made service templates</a> to add a whole checklist at once (e.g. a standard 10,000 km service with 30 items).</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Workflow tip</div>
+          <p>Start every service by applying a pre-made template, then add one-off items as you find them. Your final checklist is tailored but you didn&rsquo;t have to click through thirty items individually.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/services/statuses/"><div class="label">&larr; Back</div><div class="title">Statuses</div></a>
+          <a href="/workshop/services/templates/" class="next"><div class="label">Next &rarr;</div><div class="title">Pre-made templates</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

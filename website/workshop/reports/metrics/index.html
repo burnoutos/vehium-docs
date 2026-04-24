@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Reports metrics | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="A field-by-field explanation of every metric on the Vehium Workshop Reports page." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/reports/metrics/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/reports/">Reports</a><span class="sep">/</span><span>Metrics</span></nav>
+        <h1>Reports metrics</h1>
+        <p class="lead">Definitions for every number on the Reports page.</p>
+
+        <table>
+          <tr><th>Metric</th><th>Definition</th></tr>
+          <tr><td><strong>Total clients</strong></td><td>Lifetime client count, including deleted clients&rsquo; archival records if any.</td></tr>
+          <tr><td><strong>Recurring clients</strong></td><td>Clients with 2 or more completed services in the current calendar year.</td></tr>
+          <tr><td><strong>Total services</strong></td><td>All services ever created in your workshop.</td></tr>
+          <tr><td><strong>Services in progress</strong></td><td>Services whose current status is <em>In progress</em> or <em>Waiting for parts</em>.</td></tr>
+          <tr><td><strong>Total vehicles</strong></td><td>All vehicle records.</td></tr>
+          <tr><td><strong>Vehicles in progress</strong></td><td>Vehicles with at least one open service.</td></tr>
+          <tr><td><strong>Completed vehicles</strong></td><td>Vehicles whose most recent service is <em>Completed</em>.</td></tr>
+          <tr><td><strong>Workshop count</strong></td><td>Number of workshop locations under this account (enterprise accounts).</td></tr>
+        </table>
+
+        <h2 id="trend">Trend comparisons</h2>
+        <p>Each metric card shows a small <strong>&Delta; vs previous period</strong> indicator:</p>
+        <ul>
+          <li>Green with an up arrow &mdash; positive change.</li>
+          <li>Red with a down arrow &mdash; negative change.</li>
+          <li>Grey with a flat line &mdash; no change.</li>
+        </ul>
+        <p>The comparison period defaults to the previous calendar month, but you can switch to week-over-week or year-over-year using the dropdown at the top.</p>
+
+        <h2 id="refresh">Data freshness</h2>
+        <p>Reports are served from a cached aggregation. Numbers update within about a minute of any change. If you&rsquo;ve just completed a service and don&rsquo;t see it reflected, click the refresh icon to force a re-calculation.</p>
+
+        <div class="pager">
+          <a href="/workshop/reports/"><div class="label">&larr; Back</div><div class="title">Reports</div></a>
+          <a href="/workshop/reports/schedule/" class="next"><div class="label">Next &rarr;</div><div class="title">Schedule</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

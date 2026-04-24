@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Search and filter clients | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Find clients fast in Vehium Workshop using name, email, or phone number search." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/search/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Search</span></nav>
+        <h1>Search &amp; filter</h1>
+        <p class="lead">Find any client in under a second.</p>
+
+        <h2 id="search">The search box</h2>
+        <p>The top of the Clients list has a single search field. It matches across:</p>
+        <ul>
+          <li><strong>First or last name</strong> (partial, case-insensitive)</li>
+          <li><strong>Email</strong> (partial)</li>
+          <li><strong>Phone number</strong> (digits only, ignores spaces and <code>+</code>)</li>
+        </ul>
+
+        <p>Example queries:</p>
+        <ul>
+          <li><code>mari</code> &rarr; Maria Garcia, Marino Rossi, Maristella Conti&hellip;</li>
+          <li><code>@hotmail</code> &rarr; every client with a Hotmail address.</li>
+          <li><code>07123</code> &rarr; matches any phone containing that sequence.</li>
+        </ul>
+
+        <h2 id="keyboard">Keyboard</h2>
+        <table>
+          <tr><th>Shortcut</th><th>Action</th></tr>
+          <tr><td><code>/</code></td><td>Focus the search box from anywhere</td></tr>
+          <tr><td><code>Esc</code></td><td>Clear and unfocus</td></tr>
+          <tr><td><code>Enter</code></td><td>Open the top result</td></tr>
+          <tr><td><code>&uarr;</code> / <code>&darr;</code></td><td>Navigate results</td></tr>
+        </table>
+
+        <h2 id="no-results">No results?</h2>
+        <ul>
+          <li>Try a shorter substring.</li>
+          <li>Check you&rsquo;re on the right account &mdash; clients are scoped per workshop.</li>
+          <li>Confirm the client isn&rsquo;t under a different spelling. Search ignores accents, so <code>Jose</code> will find <code>Jos&eacute;</code>.</li>
+        </ul>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Tip</div>
+          <p>Searching by <strong>phone number</strong> is the fastest way to pull up the right record when a customer rings in &mdash; just type the last four or five digits of their number.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/clients/edit/"><div class="label">&larr; Back</div><div class="title">Edit or delete</div></a>
+          <a href="/workshop/clients/detail/" class="next"><div class="label">Next &rarr;</div><div class="title">Client detail page</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

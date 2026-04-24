@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Workshop FAQ | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Answers to the most frequently asked questions about Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/faq/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every new Vehium Workshop account gets a 7-day free trial with every feature unlocked. No credit card required." } },
+          { "@type": "Question", "name": "Does Vehium work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Partially. The desktop and mobile apps buffer short network drops and queue changes until connectivity returns. Sustained offline work isn't supported — you need a connection to sign in and sync." } },
+          { "@type": "Question", "name": "Can multiple employees use the same account?", "acceptedAnswer": { "@type": "Answer", "text": "Technically possible but not recommended. Create a separate employee record for each team member so the activity log is accurate and you can revoke access individually." } },
+          { "@type": "Question", "name": "How secure are my customer records?", "acceptedAnswer": { "@type": "Answer", "text": "Data is encrypted in transit (TLS 1.3) and at rest (AES-256) on Google Cloud Platform. Payment details are handled by Stripe and never touch Vehium servers." } },
+          { "@type": "Question", "name": "Can I export my data?", "acceptedAnswer": { "@type": "Answer", "text": "You can export individual invoices and service logs as PDF. Bulk export isn't in the UI today; contact support if you need a full archive." } }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><span>FAQ</span></nav>
+        <h1>Frequently asked questions</h1>
+        <p class="lead">Quick answers to the questions we get most often.</p>
+
+        <h2 id="trial">Is there a free trial?</h2>
+        <p>Yes &mdash; every new Vehium Workshop account gets a <strong>7-day free trial</strong> with every feature unlocked. No credit card required. See <a href="/workshop/billing/trial/">Your 7-day trial</a>.</p>
+
+        <h2 id="offline">Does Vehium work offline?</h2>
+        <p>Partially. The desktop and mobile apps buffer short network drops and queue changes until connectivity returns. Sustained offline work isn&rsquo;t supported &mdash; you need a connection to sign in and sync.</p>
+
+        <h2 id="shared-account">Can multiple employees use the same account?</h2>
+        <p>Technically possible but not recommended. Create a separate <a href="/workshop/employees/">employee record</a> for each team member so the activity log is accurate and you can revoke access individually when someone leaves.</p>
+
+        <h2 id="security">How secure are my customer records?</h2>
+        <p>Data is encrypted in transit (TLS 1.3) and at rest (AES-256) on Google Cloud Platform. Payment details are handled by <strong>Stripe</strong> and never touch Vehium servers. See the <a href="https://vehium.com/privacy.html">privacy policy</a> for details.</p>
+
+        <h2 id="export">Can I export my data?</h2>
+        <p>You can export individual <a href="/workshop/services/invoices/">invoices</a> and <a href="/workshop/vehicles/service-history/">service logs</a> as PDF. Bulk export isn&rsquo;t in the UI today; contact <a href="mailto:info@vehium.com">support</a> if you need a full archive.</p>
+
+        <h2 id="devices">How many devices can I use at once?</h2>
+        <p>Unlimited. Your account works on web, desktop, iOS, and Android concurrently. Each device is billed per seat (the employee) rather than per device.</p>
+
+        <h2 id="multi-shop">Can I manage multiple workshops on one account?</h2>
+        <p>Yes, on enterprise plans. Each workshop has its own clients, vehicles, services, and reports &mdash; but you sign in once and switch between them from the top-left selector. Contact <a href="mailto:info@vehium.com">sales</a> for enterprise pricing.</p>
+
+        <h2 id="languages">Which languages are supported?</h2>
+        <p>The UI is available in English, Greek, Bulgarian, German, Spanish, French, Italian, and Russian. See <a href="/workshop/account/appearance/">Theme &amp; language</a>.</p>
+
+        <h2 id="customer-app">What&rsquo;s the customer app?</h2>
+        <p>Vehium has a companion app for vehicle owners (plain &ldquo;Vehium&rdquo;, as opposed to &ldquo;Vehium <em>Workshop</em>&rdquo;). Customers of your workshop can install it to see their vehicles, MOT reminders, and service history. See the <a href="/customer/">customer docs</a>.</p>
+
+        <h2 id="cancel">Can I cancel any time?</h2>
+        <p>Yes. Cancel from <strong>Settings &rarr; Billing &rarr; Manage subscription</strong>. Your subscription runs until the end of the paid period, then stops. Data is preserved for 30 days in cold storage after lapse; up to 90 days total if you subscribe again.</p>
+
+        <div class="pager">
+          <a href="/workshop/troubleshooting/missing-data/"><div class="label">&larr; Back</div><div class="title">Missing data</div></a>
+          <a href="/workshop/release-notes/" class="next"><div class="label">Next &rarr;</div><div class="title">Release notes</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Client detail page | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="A full tour of the client detail page in Vehium Workshop — header card, vehicles section, and service history." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/detail/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Detail page</span></nav>
+        <h1>Client detail page</h1>
+        <p class="lead">The one-stop view for everything related to a single client.</p>
+
+        <h2 id="how-to-open">How to open</h2>
+        <p>Click any row in the Clients list, or <kbd>Enter</kbd> on the top search result. The URL looks like <code>/clients/&lt;id&gt;</code>.</p>
+
+        <h2 id="header">Header card</h2>
+        <p>The top section shows the client&rsquo;s:</p>
+        <ul>
+          <li>Full name</li>
+          <li>Email</li>
+          <li>Phone (with country flag)</li>
+          <li>Address</li>
+          <li>Count of linked vehicles and services</li>
+          <li><strong>Edit</strong> and <strong>Delete</strong> actions</li>
+        </ul>
+
+        <h2 id="vehicles">Vehicles section</h2>
+        <p>Lists every vehicle currently linked to this client. For each vehicle you see the make, model, year, and license plate. From here you can:</p>
+        <ul>
+          <li><strong>Add an existing vehicle</strong> (pick from your whole database).</li>
+          <li><strong>Create a new vehicle</strong> inline &mdash; opens the add-vehicle form pre-wired to this client.</li>
+          <li><strong>Remove the link</strong> between a vehicle and this client (the vehicle record stays; only the ownership link is removed).</li>
+          <li>Click any vehicle row to open its <a href="/workshop/vehicles/detail/">detail page</a>.</li>
+        </ul>
+
+        <h2 id="history">Service history section</h2>
+        <p>Every service order tied to any of this client&rsquo;s vehicles. Filters:</p>
+        <ul>
+          <li>By <strong>status</strong> &mdash; all / in progress / completed / cancelled / scheduled / waiting for parts.</li>
+          <li>By <strong>date range</strong>.</li>
+          <li>By <strong>vehicle</strong> (if they have several).</li>
+        </ul>
+        <p>Each row shows the date, status badge, description, vehicle, inspection-item count, and a link to the service page.</p>
+
+        <h2 id="visibility">Visibility</h2>
+        <p>Each client has a <strong>visibility</strong> toggle:</p>
+        <ul>
+          <li><strong>Public</strong> &mdash; every user in your workshop can see this client.</li>
+          <li><strong>Private</strong> &mdash; only admins and the employee who created the client can see it.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/clients/search/"><div class="label">&larr; Back</div><div class="title">Search &amp; filter</div></a>
+          <a href="/workshop/clients/vehicles/" class="next"><div class="label">Next &rarr;</div><div class="title">Linking vehicles</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

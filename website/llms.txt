@@ -1,0 +1,53 @@
+# Vehium Documentation
+
+> Vehium is a garage management platform for auto-repair workshops and vehicle owners. It runs on web, desktop (Windows/macOS via Electron), iOS, and Android. This site is the public, end-user documentation.
+
+Vehium has two end-user apps:
+
+- **Vehium Workshop** (the **workshop** app) — used by mechanics, service advisors, and garage owners to manage clients, vehicles, service orders, employees, and reports. App bundle: `com.atheod.BurnoutOSPortal`. Linked at `app.vehium.com`.
+- **Vehium** (the **customer** app for **vehicle owners**) — used to see service history, receive MOT reminders, get push notifications from their garage, upload vehicle photos, and manage their account. App bundle: `com.atheod.BurnoutOSCustomer`. Linked at `customer.vehium.com`.
+
+## Core docs
+
+- [Docs home](https://docs.vehium.com/): choose your app
+- [Workshop app overview](https://docs.vehium.com/workshop/)
+- [Customer app overview](https://docs.vehium.com/customer/)
+
+## Workshop app (Vehium Workshop)
+
+- [Getting started](https://docs.vehium.com/workshop/getting-started/): sign up, first login, onboarding
+- [Account & billing](https://docs.vehium.com/workshop/account/): profile, password, subscription, invoices
+- [Dashboard](https://docs.vehium.com/workshop/dashboard/): the home screen
+- [Clients](https://docs.vehium.com/workshop/clients/): add, edit, search, client detail
+- [Vehicles](https://docs.vehium.com/workshop/vehicles/): vehicle records, photos, MOT reminders
+- [Services](https://docs.vehium.com/workshop/services/): service catalog, appointments
+- [Employees](https://docs.vehium.com/workshop/employees/): staff management and permissions
+- [Reports](https://docs.vehium.com/workshop/reports/): revenue, service volume, exports
+- [Settings](https://docs.vehium.com/workshop/settings/): workshop profile, integrations, notifications
+- [Desktop app](https://docs.vehium.com/workshop/desktop/): installing the Windows/macOS build
+- [Release notes](https://docs.vehium.com/workshop/release-notes/)
+- [Troubleshooting](https://docs.vehium.com/workshop/troubleshooting/)
+
+## Customer app (Vehium — for vehicle owners)
+
+- [Overview](https://docs.vehium.com/customer/)
+- [Getting started](https://docs.vehium.com/customer/getting-started/): sign up, email verification, password
+- [Pair with your workshop](https://docs.vehium.com/customer/getting-started/pairing/): automatic pairing by email
+- [Your vehicles](https://docs.vehium.com/customer/vehicles/): the vehicles list and detail pages
+- [Service history](https://docs.vehium.com/customer/service-history/): every logged service, invoices, PDF export
+- [MOT reminders](https://docs.vehium.com/customer/mot/): reminder schedule, MOT history
+- [Photos](https://docs.vehium.com/customer/photos/): workshop photos and your own uploads
+- [Account](https://docs.vehium.com/customer/account/): profile, password, theme, export, deletion
+- [Notifications](https://docs.vehium.com/customer/notifications/): push and email, fine-tune categories
+- [Troubleshooting](https://docs.vehium.com/customer/troubleshooting/)
+
+## Legal & Reference
+
+- [Privacy policy](https://vehium.com/privacy.html)
+- [Terms of service](https://vehium.com/tos.html)
+- [FAQ](https://vehium.com/faq.html)
+
+## Optional
+
+- [Full documentation as a single markdown file](https://docs.vehium.com/llms-full.txt) — every page of docs concatenated, for LLM ingestion
+- [Sitemap](https://docs.vehium.com/sitemap.xml)

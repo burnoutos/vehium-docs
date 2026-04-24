@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Service statuses | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="The five service statuses in Vehium Workshop, when to use each, and how status changes affect reports and the dashboard." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/services/statuses/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Statuses</span></nav>
+        <h1>Service statuses</h1>
+        <p class="lead">Five statuses describe where each service is in its lifecycle.</p>
+
+        <h2 id="table">The five statuses</h2>
+        <table>
+          <tr><th>Status</th><th>Meaning</th><th>When to use</th></tr>
+          <tr><td><strong>Scheduled</strong></td><td>Booked but not started.</td><td>Use for appointments that will happen in the future.</td></tr>
+          <tr><td><strong>In progress</strong></td><td>Active work happening.</td><td>The default state once the car is on the ramp.</td></tr>
+          <tr><td><strong>Waiting for parts</strong></td><td>Paused pending stock.</td><td>Use when you&rsquo;re blocked on an order &mdash; distinguishes idle work from active work on the dashboard.</td></tr>
+          <tr><td><strong>Completed</strong></td><td>Work finished and signed off.</td><td>Sets <em>last service date/odometer</em> on the vehicle. Feeds revenue metrics when invoiced.</td></tr>
+          <tr><td><strong>Cancelled</strong></td><td>Will not be completed.</td><td>Use when a customer backs out or work is abandoned. Service stays in history but doesn&rsquo;t count towards revenue.</td></tr>
+        </table>
+
+        <h2 id="change">Changing status</h2>
+        <p>Two ways:</p>
+        <ul>
+          <li><strong>From the list:</strong> click the status badge on any row. A confirmation dialog appears.</li>
+          <li><strong>From the service page:</strong> click the status field in the info card and pick a new one.</li>
+        </ul>
+
+        <h2 id="effects">Effects of each status change</h2>
+        <ul>
+          <li><em>Any &rarr; Completed</em> &mdash; triggers the <a href="/workshop/services/complete/">completion workflow</a>: prompts for next service date/odometer, updates the vehicle, and locks the service from further edits by default (admins can unlock).</li>
+          <li><em>Any &rarr; Cancelled</em> &mdash; the service stays visible but is excluded from revenue charts.</li>
+          <li><em>Completed &rarr; In progress</em> &mdash; admin-only. Unlocks editing. The vehicle&rsquo;s <em>last service</em> field is recalculated from the next-newest completed service.</li>
+        </ul>
+
+        <h2 id="dashboard">How statuses appear on the dashboard</h2>
+        <p>The <strong>Service pipeline</strong> widget on the dashboard shows a segmented bar split by status, so you see at a glance how many services are blocked on parts, how many are in progress, and how many finished today. See <a href="/workshop/dashboard/metrics/">Dashboard metrics</a>.</p>
+
+        <div class="pager">
+          <a href="/workshop/services/create/"><div class="label">&larr; Back</div><div class="title">Create a service</div></a>
+          <a href="/workshop/services/inspection-items/" class="next"><div class="label">Next &rarr;</div><div class="title">Inspection items</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

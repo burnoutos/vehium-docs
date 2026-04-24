@@ -1,0 +1,146 @@
+# Vehium Workshop — Complete Documentation (Markdown Summary)
+
+> This file is a condensed, single-document summary of the full Vehium Workshop documentation, intended for ingestion by LLMs. For the human-readable articles with full detail, see https://docs.vehium.com/workshop/.
+
+---
+
+## What Vehium Workshop is
+
+Vehium Workshop (app bundle `com.atheod.BurnoutOSPortal`, served at app.vehium.com) is an all-in-one garage management platform for auto-repair workshops. It runs on web, Windows and macOS desktop, iOS, and Android. All features sync across devices.
+
+## Getting started
+
+- **Sign up** at app.vehium.com with your name, workshop email, and a username (alphanumeric, no spaces). Terms must be accepted.
+- **Verify email** via a 15-minute link sent from `no-reply@vehium.com`. Account activates and the 7-day trial begins on verification.
+- **Set password**: 12+ chars, with uppercase, lowercase, digit, and special character. Set-password link is valid for 7 days.
+- **First login**: lands on dashboard (empty for new accounts). Recommended order: fill workshop profile → set work hours → add a client and vehicle → create a first service.
+
+## Billing
+
+- **Trial**: 7 days, every feature unlocked, no credit card required. Trial ends → account moves to "Payment required" state — can sign in and view existing data but not create records.
+- **Plans**: picked at Settings → Billing. Pricing shown in live plan cards; canonical pricing at vehium.com/#pricing.
+- **Checkout**: redirects to Stripe-hosted checkout. Card details never touch Vehium.
+- **Managing payment**: change card, view invoices, and pay failed charges from the Stripe customer portal via Settings → Billing → Manage subscription.
+- **Subscription states**: Trial active, Subscription active, Trial ending soon, Payment required.
+- **Data retention**: 30 days after lapse in cold storage; 35 days backups; up to 90 days total recovery if subscribed again.
+
+## Dashboard
+
+Summary cards: total clients, total vehicles, active services, completed today. Growth cards with month-over-month delta. Revenue: monthly net/VAT/gross + 30-day trend line. Service pipeline bar split by status. Recent activity feed (last 10 events). Top clients. Vehicle brands pie (by count or by service volume). Quick actions: new service/client/vehicle/employee, view reports. Keyboard shortcuts: `N S`, `N C`, `N V`, `/` to focus search, `G D` to dashboard.
+
+## Clients
+
+A client is a person/company whose vehicles you service. Fields: first and last name (required), email, phone (international), street/city/state/postal code/country.
+
+- **Add**: from Clients list, dashboard quick action, or inline during service creation.
+- **Search**: matches name, email, or phone (digits).
+- **Detail page**: header card with identity and actions (Edit/Delete), Vehicles section (link existing or create new), Service history section (filter by status/date/vehicle). Visibility: public (all users) or private (admins + creator only).
+- **Linking vehicles**: attach via picker, create inline, or remove link. A vehicle can have multiple owners.
+- **Delete**: unlinks vehicles and services (they stay in system as "Owner removed"). Irreversible. Support can restore within 30 days.
+
+## Vehicles
+
+Vehicle fields: make (picker), model, year (4 digits, 1900–present+1), license plate (alphanumeric/dash, 15 chars max), VIN (exactly 17 chars, no I/O/Q), engine type (Petrol/Diesel/Hybrid/Electric/LPG/Other), odometer, owners (multi-select).
+
+- **Detail page**: info card, owners list, service history, MOT history, photo gallery, visibility toggle.
+- **MOT history**: add test with date, expiry date, result (Scheduled/Pass/Fail/Advisory), testing centre, certificate number, advisory notes. Expiry badges: green >60d, amber 30–60d, red ≤30d/expired. Auto-alerts to customer app: push at -30d/-7d and email at -3d.
+- **Photos**: JPEG/PNG/HEIC up to 10 MB, unlimited per vehicle. Persist separately from service photos.
+- **Service log PDF**: tick multiple services and print a combined PDF with inspection items, photos, and invoice totals, plus vehicle ID block and workshop header.
+
+## Services
+
+Services tie vehicle, client, inspection findings, photos, and invoice together. Lifecycle: create → add inspection items → update items → attach photos → add invoice → mark complete.
+
+- **Create**: pick vehicle, date (dd/mm/yyyy; can't be earlier than last service date), odometer (≥ last recorded), status (default In progress), optional description and assigned employee.
+- **Statuses**: Scheduled, In progress, Waiting for parts, Completed, Cancelled. Completed triggers locking + vehicle last-service update + revenue counting. Admins can revert.
+- **Inspection items**: grouped by category (Brakes, Engine, Transmission, Suspension, Electrical, Body & Interior, Tyres & Wheels, Other, plus custom). Each item has status (OK/Advisory/Replaced/Urgent) and notes. Changes autosave.
+- **Pre-made templates**: build reusable bundles of inspection items via a 3-step wizard (details → add items → review). Apply multiple templates to one service (de-duped). Revert to remove only template-added items. Delete blocked if in use.
+- **Photos**: per-service, includable in PDF printout. Same limits as vehicle photos.
+- **Invoices**: line items (description, quantity, unit price, VAT%). Totals recalculate live. Export as PDF with workshop header. Invoice numbers sequential and immutable.
+- **Complete**: set next service date and/or odometer — triggers customer reminders 14 days prior.
+
+## Employees
+
+Each employee is a separate login. Fields: username (alphanumeric), password (12+ chars rules), name, email, phone, home number, roles (multi-select, at least one).
+
+- **Roles**: Admin (everything), Manager (everything except billing/delete/admin-creation), Mechanic (create and update services, add items and photos, mark complete), Receptionist (create clients/vehicles, scheduled services, read-only in-progress).
+- **Assigned vehicles**: route cars to specific technicians. Multi-assignee allowed. Dashboards filter to assigned vehicles by default.
+
+## Reports (admins + managers only)
+
+Metrics: total clients (lifetime), recurring clients (2+ services this year), total services, services in progress (in progress or waiting for parts), total vehicles, vehicles in progress, completed vehicles, workshop count. Trend comparisons: vs previous month/week/year.
+
+Schedule view: Today pane, This week pane, Blocked pane (services waiting for parts, oldest first). Click through to service page. Filters by assigned employee and status.
+
+## Settings
+
+- **Workshop profile**: company name, email, VAT, phone, description, address, logo (square ≥512px, ≤2MB), units (km/miles), currency, default VAT rate. Past invoices immutable.
+- **Work hours**: per-day open/close times, multiple breaks per day, copy Monday to weekdays. Time zone from profile.
+- **Public listing**: opt in to appear in customer app directory. Requires name, email, address, logo. Shows logo, name, description, address, phone, hours, map pin. Customer data never exposed.
+- **Legal**: privacy policy, terms of service, IP infringement links. GDPR data request: email info@vehium.com. Subprocessors: Stripe, Google Cloud, Firebase Cloud Messaging, Sendgrid.
+- **Delete workshop**: two options — 30-day grace (reversible) or immediate (purged in minutes). Requires password confirmation and typing company name. Legal invoice archive retained up to 7 years.
+
+## Desktop app
+
+Electron wrapper of the web build. Windows 10+ (signed NSIS installer, ~100MB, ~300MB installed) and macOS 11+ (signed+notarized DMG, ~120MB, ~350MB installed). Auto-updates in background; restart to activate. Logs at `%APPDATA%\Vehium\logs\main.log` (Windows) or `~/Library/Application Support/Vehium/logs/main.log` (macOS).
+
+## Localization
+
+Supported: English (en), Greek (el), Bulgarian (bg), German (de), Spanish (es), French (fr), Italian (it), Russian (ru). Changes UI only — user-entered data unchanged.
+
+## Security
+
+- TLS 1.3 in transit, AES-256 at rest on Google Cloud Platform.
+- Payments handled entirely by Stripe (PCI-DSS Level 1).
+- No 2FA yet — use unique strong password + password manager.
+- Account auto-locks after 10 failed login attempts for 15 minutes.
+
+## App facts
+
+| | |
+|---|---|
+| Name | Vehium Workshop |
+| Current version | 3.0.6 |
+| Web | app.vehium.com (prod), dev-app.vehium.com (staging) |
+| iOS bundle | com.atheod.BurnoutOSPortal |
+| Android package | com.atheod.BurnoutOSPortal |
+| Desktop ID | com.vehium.burnoutos |
+| Trial | 7 days, no credit card |
+| Languages | English, Greek, Bulgarian, German, Spanish, French, Italian, Russian |
+
+---
+
+## Customer app (Vehium — for vehicle owners) — summary
+
+Bundle `com.atheod.BurnoutOSCustomer`, served at customer.vehium.com. The companion app for vehicle owners. Shows vehicles the customer owns, service history the workshop logged, MOT expiry reminders (push at -30d/-7d, email at -3d), push notifications on service changes, and photos. Pairs automatically when workshop client email matches customer account email.
+
+### Getting started
+Sign up on iOS (App Store), Android (Google Play), or web (customer.vehium.com) with the email the workshop has on file. Verify via emailed link. Minimum 8-character password. No credit card — the customer app is free.
+
+### Pairing with a workshop
+One-way read-only. When a workshop client email matches the customer account email, Vehium automatically links the vehicles, service history, MOT history, and photos. Works across multiple workshops — all vehicles merge into a single list. If nothing appears, the workshop should update the client email and the customer refreshes.
+
+### Vehicles
+Vehicles are created and owned by the workshop; the customer app is read-only for vehicle records. Each vehicle shows make/model/year, plate, MOT status badge (valid / due soon / expired), service history, MOT history, and photos. Shared vehicles (family cars, fleet) can be linked to multiple clients — both parties see identical data.
+
+### Service history
+Sorted newest-first. Each service shows status (scheduled / in progress / completed), date in/out, mileage, inspection items, parts and labour line items, photos, workshop notes, and a downloadable invoice PDF for completed services. Live updates as the workshop changes status or adds photos/notes. Full vehicle log export available as a single PDF.
+
+### MOT reminders
+Push at 30 days and 7 days before expiry, email at 3 days, both on expiry day. Push requires notifications enabled at the system level. MOT history (date, result, odometer, advisories) is logged by the workshop and surfaced in the customer app.
+
+### Photos
+Mixed gallery: workshop-uploaded and customer-uploaded. Customers can add photos from camera or library (max 50 per vehicle, auto-resized to 2048 px longest side). Workshop photos can only be deleted by the workshop.
+
+### Account
+Settings → Profile (name, phone, photo), Password, Appearance (light/dark/system, language), Notifications (per-category switches + quiet hours), Export my data (ZIP of JSON + photos), Delete account (permanent, keeps workshop business records but unlinks personal data). Email change requires support.
+
+### Notifications
+Categories: service scheduled/started/completed, photos & notes, MOT reminders, workshop pairing. Each can be toggled. Completion emails include an invoice link. Quiet hours deliver pushes silently; emails are unaffected.
+
+### Troubleshooting
+Most common: email mismatch between workshop client record and customer account (fix: workshop updates email, customer refreshes). Push issues: system permissions, Do Not Disturb / Focus on iOS, quiet hours in-app. Password reset links expire after 60 minutes.
+
+## Support
+
+Email info@vehium.com with workshop name, exact error/screenshot, time + time zone, device, and (for desktop) the log file. Billing issues prioritized. Privacy/data requests go to info@vehium.com.

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Managing payment | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Update the card on file, fix failed charges, and download receipts for Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/billing/payment/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/billing/">Billing</a><span class="sep">/</span><span>Payment</span></nav>
+        <h1>Managing payment</h1>
+        <p class="lead">Change your card, fix failed charges, and find your receipts.</p>
+
+        <h2 id="change-card">Change your card</h2>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Click <strong>Manage subscription</strong>.</li>
+          <li>On the Stripe customer portal, click <strong>Add payment method</strong> or <strong>Update</strong>.</li>
+          <li>Enter the new card and save. The new card becomes the default for future charges.</li>
+        </ol>
+
+        <h2 id="failed-charge">If a charge fails</h2>
+        <p>Stripe retries failed charges automatically over the following days. Meanwhile, your account stays active (up to 3 days of grace period). If all retries fail, the subscription expires and the account moves to <strong>Payment required</strong>.</p>
+        <p>To fix it manually:</p>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Click <strong>Manage subscription</strong>.</li>
+          <li>Pay the outstanding invoice from the portal, or update the card and Stripe will retry.</li>
+        </ol>
+
+        <h2 id="receipts">Download receipts &amp; invoices</h2>
+        <p>Two ways:</p>
+        <ul>
+          <li><strong>Email:</strong> Stripe auto-emails a PDF receipt after every successful charge.</li>
+          <li><strong>In-app:</strong> <strong>Settings &rarr; Billing &rarr; Invoices</strong> lists every invoice with a download link.</li>
+        </ul>
+
+        <h2 id="vat">VAT receipts</h2>
+        <p>Invoices include a VAT breakdown when applicable, based on the billing address on file. If your VAT number is missing from the invoice, add it to <strong>Workshop profile</strong> first, then regenerate the invoice by clicking <strong>Update</strong> on the invoice row.</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Need a custom invoice?</div>
+          <p>For enterprise contracts, wire transfer, or bespoke terms, email <a href="mailto:info@vehium.com">info@vehium.com</a> with your workshop details.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/billing/subscription/"><div class="label">&larr; Back</div><div class="title">Subscription &amp; plans</div></a>
+          <a href="/workshop/billing/status/" class="next"><div class="label">Next &rarr;</div><div class="title">Subscription status</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

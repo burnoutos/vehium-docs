@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Troubleshooting | Vehium Docs</title>
+    <meta name="description" content="Fix common issues with the Vehium customer app — pairing, missing vehicles, notifications, sign-in, and more." />
+    <link rel="canonical" href="https://docs.vehium.com/customer/troubleshooting/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-customer.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/customer/">Customer app</a><span class="sep">/</span><span>Troubleshooting</span></nav>
+        <h1>Troubleshooting</h1>
+        <p class="lead">Common issues and how to fix them. If your problem isn&rsquo;t listed, email <a href="mailto:info@vehium.com">info@vehium.com</a>.</p>
+
+        <h2 id="no-vehicles">My vehicles aren&rsquo;t showing up</h2>
+        <p>This almost always means the email on your Vehium account doesn&rsquo;t match the email your workshop has on file. See <a href="/customer/getting-started/pairing/#email-mismatch">pairing: email mismatch</a>. Ask your workshop to update your client record, then pull down to refresh in the app.</p>
+
+        <h2 id="no-notifications">I&rsquo;m not getting notifications</h2>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-title">Check system permissions</div>
+            <p>See <a href="/customer/notifications/#enable">enable push notifications</a> for iOS, Android, and web steps.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Check in-app categories</div>
+            <p>Open <em>Settings &rarr; Notifications</em> in the Vehium app and make sure the category you care about is on.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Disable quiet hours</div>
+            <p>If quiet hours are active, pushes arrive silently. Disable them in <em>Settings &rarr; Notifications &rarr; Quiet hours</em>.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Check iOS Focus</div>
+            <p>On iOS 15+, Vehium may be filtered by Do Not Disturb or another Focus profile. Add Vehium to allowed apps.</p>
+          </li>
+        </ol>
+
+        <h2 id="verify">I didn&rsquo;t get a verification email</h2>
+        <ul>
+          <li>Wait 1&ndash;2 minutes and refresh your inbox.</li>
+          <li>Check spam / junk.</li>
+          <li>Add <code>no-reply@vehium.com</code> to your contacts and request a new email from the sign-in screen.</li>
+        </ul>
+
+        <h2 id="forgot-password">Forgot password</h2>
+        <p>Tap <em>Forgot password</em> on the sign-in screen. We send a reset link. Links expire after 60 minutes &mdash; if the link is expired, request a fresh one.</p>
+
+        <h2 id="stuck">The app is stuck loading</h2>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-title">Check your internet</div>
+            <p>Toggle wifi or mobile data, or try a different network.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Force-quit and reopen</div>
+            <p>Swipe the app away in the app switcher, then reopen it.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Sign out and back in</div>
+            <p>From <em>Settings &rarr; Sign out</em>, then sign in again.</p>
+          </li>
+          <li class="step">
+            <div class="step-title">Update to the latest version</div>
+            <p>Check the App Store or Google Play for updates and install the latest.</p>
+          </li>
+        </ol>
+
+        <h2 id="outdated-data">My service history looks outdated</h2>
+        <p>Pull down to refresh on the vehicle detail page. If a recent service still isn&rsquo;t appearing, ask your workshop to confirm it&rsquo;s saved on their side &mdash; occasionally a service is still in a <em>draft</em> state and isn&rsquo;t visible to the customer app until it&rsquo;s scheduled or completed.</p>
+
+        <h2 id="contact">Contact support</h2>
+        <p>Email <a href="mailto:info@vehium.com">info@vehium.com</a>. Include your account email, the vehicle or service involved, and a screenshot if you can &mdash; we typically respond within one business day.</p>
+
+        <div class="pager">
+          <a href="/customer/notifications/"><div class="label">&larr; Back</div><div class="title">Notifications</div></a>
+          <a href="/customer/" class="next"><div class="label">Next &rarr;</div><div class="title">Customer overview</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

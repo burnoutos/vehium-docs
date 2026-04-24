@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Vehicle detail page | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="A full tour of the vehicle detail page in Vehium Workshop — info card, owners, services, MOT, and photos." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/detail/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/vehicles/">Vehicles</a><span class="sep">/</span><span>Detail page</span></nav>
+        <h1>Vehicle detail page</h1>
+        <p class="lead">The command centre for everything this car has been through.</p>
+
+        <h2 id="info-card">Info card</h2>
+        <p>At the top of the page, a card summarises the vehicle:</p>
+        <ul>
+          <li>Make, model, year</li>
+          <li>License plate &amp; VIN</li>
+          <li>Engine type &amp; current odometer</li>
+          <li>Last service date</li>
+          <li>Next service date &amp; odometer (if set when a service was completed)</li>
+          <li><strong>Edit</strong> and <strong>Delete</strong> actions</li>
+        </ul>
+
+        <h2 id="owners">Owners</h2>
+        <p>The clients linked to this car. You can add more (the picker is searchable) or unlink any. See <a href="/workshop/clients/vehicles/">Linking vehicles to clients</a>.</p>
+
+        <h2 id="service-history">Service history</h2>
+        <p>Every service order ever opened for this car:</p>
+        <ul>
+          <li>Date, status badge, odometer at service, description, inspection-item count.</li>
+          <li>Expand to preview items and photos.</li>
+          <li>Click to open the <a href="/workshop/services/">service page</a>.</li>
+          <li>Select multiple rows and <strong>Print as PDF</strong> for a combined log &mdash; see <a href="/workshop/vehicles/service-history/">Service log &amp; PDF</a>.</li>
+        </ul>
+
+        <h2 id="mot">MOT history</h2>
+        <p>A log of every MOT test this vehicle has had. See <a href="/workshop/vehicles/mot/">MOT history</a> for the full workflow.</p>
+
+        <h2 id="photos">Photos</h2>
+        <p>A gallery of vehicle photos you&rsquo;ve uploaded or captured. See <a href="/workshop/vehicles/photos/">Vehicle photos</a>.</p>
+
+        <h2 id="visibility">Visibility</h2>
+        <p>A <strong>public/private</strong> toggle controls whether every employee can see this vehicle or only admins plus the creator.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Syncs to the customer app</div>
+          <p>If at least one linked owner has a matching Vehium customer-app account, the vehicle appears in that vehicle owner&rsquo;s phone app, with MOT alerts and service history visible to them.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/vehicles/add/"><div class="label">&larr; Back</div><div class="title">Add a vehicle</div></a>
+          <a href="/workshop/vehicles/mot/" class="next"><div class="label">Next &rarr;</div><div class="title">MOT history</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

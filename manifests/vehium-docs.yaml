@@ -1,0 +1,97 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vehium-docs
+  namespace: bos
+  labels:
+    app: vehium
+    tier: docs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vehium
+      tier: docs
+  template:
+    metadata:
+      labels:
+        app: vehium
+        tier: docs
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          matchLabelKeys: ["pod-template-hash"]
+          labelSelector:
+            matchLabels:
+              app: vehium
+              tier: docs
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: vehium-docs
+          image: ghcr.io/burnoutos/vehium-docs:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+              httpHeaders:
+                - name: Host
+                  value: docs.vehium.com
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+              httpHeaders:
+                - name: Host
+                  value: docs.vehium.com
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: 20m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vehium-docs
+  namespace: bos
+  labels:
+    app: vehium
+    tier: docs
+spec:
+  type: ClusterIP
+  selector:
+    app: vehium
+    tier: docs
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: vehium-docs-pdb
+  namespace: bos
+  labels:
+    app: vehium
+    tier: docs
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: vehium
+      tier: docs

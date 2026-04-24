@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Add a vehicle | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Create a new vehicle record in Vehium Workshop — VIN and license-plate rules, engine type, odometer, and owner linking." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/add/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/vehicles/">Vehicles</a><span class="sep">/</span><span>Add</span></nav>
+        <h1>Add a vehicle</h1>
+        <p class="lead">Register a new car in the system, with or without an owner attached.</p>
+
+        <h2 id="how">How to open the form</h2>
+        <ul>
+          <li><strong>Vehicles page</strong> &rarr; click <strong>+ New vehicle</strong>.</li>
+          <li><strong>Dashboard</strong> &rarr; click the <strong>New vehicle</strong> quick action.</li>
+          <li><strong>Client detail page</strong> &rarr; in the Vehicles section, click <strong>Create new vehicle</strong> (owner auto-linked).</li>
+          <li><strong>Service creation</strong> &rarr; in the vehicle picker, click <strong>Create vehicle</strong> if none exists.</li>
+        </ul>
+
+        <h2 id="fields">Fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Validation</th></tr>
+          <tr><td>Make (brand)</td><td>Yes</td><td>Searchable picker; add a custom brand if not listed.</td></tr>
+          <tr><td>Model</td><td>Yes</td><td>Free text, up to 100 characters.</td></tr>
+          <tr><td>Year</td><td>Yes</td><td>4 digits, between 1900 and current year + 1.</td></tr>
+          <tr><td>License plate</td><td>Yes</td><td>Alphanumeric, dashes allowed, max 15 characters.</td></tr>
+          <tr><td>VIN</td><td>Optional</td><td>Exactly 17 characters when provided. Letters <code>I</code>, <code>O</code>, and <code>Q</code> are not allowed (ISO 3779).</td></tr>
+          <tr><td>Engine type</td><td>Optional</td><td>Dropdown: Petrol, Diesel, Hybrid, Electric, LPG, Other.</td></tr>
+          <tr><td>Odometer</td><td>Optional</td><td>Non-negative integer. Units are set in your <a href="/workshop/settings/workshop-profile/">workshop profile</a>.</td></tr>
+          <tr><td>Owner(s)</td><td>Optional</td><td>Pick one or more clients; multi-select.</td></tr>
+        </table>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">VIN is your best identifier</div>
+          <p>Two cars can share a plate over their lifetimes, but VINs are unique. If you have the VIN, enter it &mdash; it protects you from duplicate records and is required for some reporting.</p>
+        </div>
+
+        <h2 id="after">After you save</h2>
+        <p>The vehicle appears in the Vehicles list immediately. Any owners you selected now show this car on their client page.</p>
+
+        <h2 id="errors">Common validation errors</h2>
+        <ul>
+          <li><em>Invalid VIN</em> &mdash; wrong length or contains <code>I</code>/<code>O</code>/<code>Q</code>.</li>
+          <li><em>Plate already exists</em> &mdash; a vehicle with the same plate and country exists. Check if that&rsquo;s the same car before creating a duplicate.</li>
+          <li><em>Year out of range</em> &mdash; likely a typo.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/vehicles/"><div class="label">&larr; Back</div><div class="title">Vehicles overview</div></a>
+          <a href="/workshop/vehicles/detail/" class="next"><div class="label">Next &rarr;</div><div class="title">Vehicle detail page</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

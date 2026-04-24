@@ -1,0 +1,10 @@
+{
+  "name": "vehium-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-user documentation for Vehium, served at docs.vehium.com.",
+  "scripts": {
+    "start": "docker run --rm -p 8080:80 $(docker build -q .)",
+    "build": "docker build -t ghcr.io/burnoutos/vehium-docs:latest ."
+  }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://docs.vehium.com/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://docs.vehium.com/customer/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/customer/getting-started/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/customer/getting-started/pairing/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/customer/vehicles/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/customer/service-history/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/customer/mot/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/customer/photos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/customer/account/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/customer/notifications/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/customer/troubleshooting/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/getting-started/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/getting-started/sign-up/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/getting-started/verify-email/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/getting-started/set-password/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/getting-started/first-login/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/account/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/account/profile/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/account/password/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/account/appearance/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/account/sessions/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/billing/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/billing/trial/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/billing/subscription/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/billing/payment/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/billing/status/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/dashboard/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/dashboard/metrics/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/dashboard/charts/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/dashboard/quick-actions/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/clients/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/add/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/edit/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/search/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/detail/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/vehicles/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/clients/history/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/vehicles/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/vehicles/add/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/vehicles/detail/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/vehicles/mot/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/vehicles/photos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/vehicles/service-history/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/services/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/create/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/statuses/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/inspection-items/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/templates/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/photos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/invoices/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/services/complete/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/employees/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/employees/add/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/employees/roles/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/employees/assigned-vehicles/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/reports/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/reports/metrics/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/reports/schedule/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/settings/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/settings/workshop-profile/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/settings/work-hours/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/settings/public-listing/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/settings/legal/</loc><lastmod>2026-04-24</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/settings/delete-workshop/</loc><lastmod>2026-04-24</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/desktop/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/desktop/install-windows/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/desktop/install-macos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/desktop/troubleshooting/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/troubleshooting/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/troubleshooting/login/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/troubleshooting/payment/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/troubleshooting/missing-data/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://docs.vehium.com/workshop/faq/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://docs.vehium.com/workshop/release-notes/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

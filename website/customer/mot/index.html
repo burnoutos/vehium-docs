@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>MOT reminders | Vehium Docs</title>
+    <meta name="description" content="Never miss an MOT. Vehium reminds you 30 days, 7 days, and 3 days before your MOT expires — push notifications and email." />
+    <link rel="canonical" href="https://docs.vehium.com/customer/mot/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-customer.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/customer/">Customer app</a><span class="sep">/</span><span>MOT reminders</span></nav>
+        <h1>MOT reminders</h1>
+        <p class="lead">Never miss an MOT. Vehium tracks every vehicle&rsquo;s MOT expiry date and reminds you with enough lead time to book a test.</p>
+
+        <h2 id="schedule">Reminder schedule</h2>
+        <table>
+          <tr><th>When</th><th>How you&rsquo;re notified</th></tr>
+          <tr><td>30 days before expiry</td><td>Push notification</td></tr>
+          <tr><td>7 days before expiry</td><td>Push notification</td></tr>
+          <tr><td>3 days before expiry</td><td>Email</td></tr>
+          <tr><td>On expiry day</td><td>Push notification and email</td></tr>
+        </table>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Push notifications must be enabled</div>
+          <p>MOT reminders use the Vehium customer app&rsquo;s push channel. If you&rsquo;ve disabled notifications, you&rsquo;ll still get the email ones &mdash; turn push back on in <a href="/customer/notifications/">Notifications</a>.</p>
+        </div>
+
+        <h2 id="history">MOT history</h2>
+        <p>On a vehicle&rsquo;s detail page, the <em>MOT history</em> section lists every test the workshop has logged:</p>
+        <ul>
+          <li>Test date and result (pass / fail / advisory).</li>
+          <li>Odometer reading at test.</li>
+          <li>Advisories and defects, if any.</li>
+          <li>Certificate reference number (where applicable).</li>
+        </ul>
+
+        <h2 id="who-logs-it">Who enters the MOT</h2>
+        <p>Your workshop enters MOT results. If you had the test done elsewhere, ask your workshop to add it to your vehicle record &mdash; the reminder dates and history then become accurate.</p>
+
+        <h2 id="status-badge">The status badge</h2>
+        <p>On the vehicles list, each vehicle carries a colour-coded MOT status:</p>
+        <ul>
+          <li><strong>Valid</strong> &mdash; more than 30 days until expiry.</li>
+          <li><strong>Due soon</strong> &mdash; 30 days or fewer remaining.</li>
+          <li><strong>Expired</strong> &mdash; past the expiry date.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/customer/service-history/"><div class="label">&larr; Back</div><div class="title">Service history</div></a>
+          <a href="/customer/photos/" class="next"><div class="label">Next &rarr;</div><div class="title">Photos</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

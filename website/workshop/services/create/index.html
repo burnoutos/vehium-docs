@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Create a service | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Step-by-step guide to creating a new service order in Vehium Workshop — field rules and validation." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/services/create/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Create a new service in Vehium Workshop",
+        "step": [
+          { "@type": "HowToStep", "name": "Open the new-service dialog" },
+          { "@type": "HowToStep", "name": "Pick the vehicle" },
+          { "@type": "HowToStep", "name": "Set the date and initial status" },
+          { "@type": "HowToStep", "name": "Save — then add inspection items" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Create</span></nav>
+        <h1>Create a service</h1>
+        <p class="lead">Open a new work order. Everything else &mdash; inspection items, photos, invoice &mdash; layers on afterwards.</p>
+
+        <h2 id="open">Open the dialog</h2>
+        <ul>
+          <li><strong>Services page</strong> &rarr; <strong>+ New service</strong> in the top-right.</li>
+          <li><strong>Dashboard</strong> &rarr; <strong>New service</strong> quick action.</li>
+          <li><strong>Vehicle detail page</strong> &rarr; <strong>+ New service</strong> in the Service history section (vehicle pre-filled).</li>
+        </ul>
+
+        <h2 id="fields">Fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+          <tr><td>Vehicle</td><td>Yes</td><td>Searchable by plate, VIN, make, model, year. If no match, click <strong>Create vehicle</strong> to add one inline.</td></tr>
+          <tr><td>Date</td><td>Yes</td><td><code>dd/mm/yyyy</code> in locale-appropriate order. Cannot be earlier than the vehicle&rsquo;s last service date.</td></tr>
+          <tr><td>Odometer</td><td>Optional</td><td>Must be &ge; the last recorded odometer for this vehicle. Warns if you type less.</td></tr>
+          <tr><td>Status</td><td>Yes</td><td>Default is <strong>In progress</strong>. See <a href="/workshop/services/statuses/">Service statuses</a>.</td></tr>
+          <tr><td>Description</td><td>Optional</td><td>Free text. Shown on the service card and on invoices.</td></tr>
+          <tr><td>Assigned employee</td><td>Optional</td><td>Who is doing the work. Defaults to the creator.</td></tr>
+        </table>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Save first, add items next</div>
+          <p>You need to save the service before adding inspection items or photos. Don&rsquo;t worry about filling in every detail at creation time &mdash; a service is a record you build up over the job.</p>
+        </div>
+
+        <h2 id="after">After saving</h2>
+        <p>You land on the service detail page with empty <em>Inspection items</em>, <em>Photos</em>, and <em>Invoice</em> sections ready to populate. The service also appears on:</p>
+        <ul>
+          <li>The main Services list (in the <strong>In progress</strong> tab).</li>
+          <li>The vehicle&rsquo;s Service history section.</li>
+          <li>Every linked client&rsquo;s Service history section.</li>
+          <li>The dashboard activity feed.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/services/"><div class="label">&larr; Back</div><div class="title">Services overview</div></a>
+          <a href="/workshop/services/statuses/" class="next"><div class="label">Next &rarr;</div><div class="title">Service statuses</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

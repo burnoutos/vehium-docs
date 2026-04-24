@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Marking a service complete | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="What happens when you mark a Vehium Workshop service as completed — next service date, locking, and the completion workflow." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/services/complete/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Complete</span></nav>
+        <h1>Marking a service complete</h1>
+        <p class="lead">Finishing a service order updates the vehicle and feeds your reports. Here&rsquo;s exactly what happens.</p>
+
+        <h2 id="how">How to mark complete</h2>
+        <ol>
+          <li>Open the service.</li>
+          <li>Click the status field and pick <strong>Completed</strong> (or hit <strong>Mark complete</strong> in the actions menu).</li>
+          <li>A dialog prompts you for:
+            <ul>
+              <li><strong>Completion date</strong> (defaults to today).</li>
+              <li><strong>Next service odometer</strong> (optional).</li>
+              <li><strong>Next service date</strong> (optional).</li>
+            </ul>
+          </li>
+          <li>Confirm.</li>
+        </ol>
+
+        <h2 id="effects">What happens</h2>
+        <ul>
+          <li>Service status becomes <strong>Completed</strong> with a green badge.</li>
+          <li>Vehicle&rsquo;s <strong>last service date</strong> and <strong>last odometer</strong> are updated.</li>
+          <li>Vehicle&rsquo;s <strong>next service</strong> reminders appear (if you set them) &mdash; customer gets a push 14 days before.</li>
+          <li>Invoice (if any) counts toward your <strong>monthly revenue</strong> metrics.</li>
+          <li>Service is <strong>locked</strong> from further edits by regular employees &mdash; admins can unlock via <strong>Revert to in-progress</strong>.</li>
+        </ul>
+
+        <h2 id="next-service">Setting the next service</h2>
+        <p>Two fields:</p>
+        <ul>
+          <li><strong>Odometer</strong> &mdash; numeric value in your workshop&rsquo;s units. Example: <code>125 000 km</code>.</li>
+          <li><strong>Date</strong> &mdash; absolute calendar date. Example: <code>12 months from now</code>.</li>
+        </ul>
+        <p>Either or both is fine. If both are set, the customer is alerted when the vehicle reaches <em>either</em> milestone, whichever comes first.</p>
+
+        <h2 id="revert">Reverting completion</h2>
+        <p>Admins can un-complete a service by picking any other status. This:</p>
+        <ul>
+          <li>Unlocks editing.</li>
+          <li>Recalculates the vehicle&rsquo;s <em>last service</em> from the next-newest completed service.</li>
+          <li>Leaves the invoice intact.</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Why locking?</div>
+          <p>Locking completed services prevents accidental edits that could break audit trails and invoice references. Admins retain override power; regular employees get a clean, read-only view.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/services/invoices/"><div class="label">&larr; Back</div><div class="title">Invoices</div></a>
+          <a href="/workshop/employees/" class="next"><div class="label">Next &rarr;</div><div class="title">Employees</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

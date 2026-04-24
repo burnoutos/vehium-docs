@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Vehicle photos | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Upload and organize vehicle photos in Vehium Workshop — camera capture, uploads, and deletion." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/photos/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/vehicles/">Vehicles</a><span class="sep">/</span><span>Photos</span></nav>
+        <h1>Vehicle photos</h1>
+        <p class="lead">Document condition, damage, and notable details against each vehicle record.</p>
+
+        <h2 id="where">Where the gallery lives</h2>
+        <p>Every vehicle detail page has a <strong>Photos</strong> section. Photos attached to the <em>vehicle</em> are different from photos attached to a <em>service</em> &mdash; vehicle photos persist across all services, while <a href="/workshop/services/photos/">service photos</a> belong to one specific job.</p>
+
+        <h2 id="upload">Adding photos</h2>
+        <ol>
+          <li>Open the vehicle&rsquo;s detail page.</li>
+          <li>Scroll to <strong>Photos</strong>.</li>
+          <li>Click <strong>+ Add photos</strong>.</li>
+          <li>Choose one of:
+            <ul>
+              <li><strong>Take a photo</strong> (mobile) &mdash; opens the camera.</li>
+              <li><strong>Choose from library</strong> (mobile) &mdash; pick from your gallery.</li>
+              <li><strong>Upload from computer</strong> (web, desktop) &mdash; drag &amp; drop or select files.</li>
+            </ul>
+          </li>
+          <li>Photos upload one at a time with a progress indicator.</li>
+        </ol>
+
+        <h2 id="limits">Limits</h2>
+        <ul>
+          <li>Accepted formats: JPEG, PNG, HEIC (auto-converted to JPEG on upload).</li>
+          <li>Maximum file size: <strong>10 MB</strong> per photo.</li>
+          <li>No hard limit on number of photos per vehicle, but try to keep it under 50 per car for performance.</li>
+        </ul>
+
+        <h2 id="viewing">Viewing and deleting</h2>
+        <p>Click any thumbnail to open the full-size viewer. From there you can swipe (mobile) or use arrow keys (web) to cycle through all photos for this vehicle. The <strong>trash</strong> icon deletes the current photo after a confirmation.</p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Deletion is permanent</div>
+          <p>Deleted photos are removed from storage within 24 hours. There is no undo. If you need to keep a record, download the photo first.</p>
+        </div>
+
+        <h2 id="visibility">Who sees them</h2>
+        <p>Every user in your workshop can see vehicle photos (subject to the vehicle&rsquo;s <a href="/workshop/vehicles/detail/">visibility</a> toggle). Photos are <strong>not</strong> sent to the customer app.</p>
+
+        <div class="pager">
+          <a href="/workshop/vehicles/mot/"><div class="label">&larr; Back</div><div class="title">MOT history</div></a>
+          <a href="/workshop/vehicles/service-history/" class="next"><div class="label">Next &rarr;</div><div class="title">Service log &amp; PDF</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

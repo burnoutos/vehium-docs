@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Dashboard overview | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="A tour of the Vehium Workshop dashboard — the metrics, charts, activity feed, and quick actions on the home screen." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/dashboard/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><span>Dashboard</span></nav>
+        <h1>Dashboard</h1>
+        <p class="lead">The first screen you see after signing in. Your workshop at a glance: how many clients, which services are in flight, what revenue looks like, and what happened recently.</p>
+
+        <h2 id="sections">Sections on the dashboard</h2>
+        <ol>
+          <li><strong>Summary cards</strong> &mdash; total clients, total vehicles, active services, services completed today.</li>
+          <li><strong>Growth cards</strong> &mdash; new clients and vehicles this month, with month-over-month change.</li>
+          <li><strong>Revenue</strong> &mdash; monthly net / VAT / gross, and a 30-day line chart.</li>
+          <li><strong>Service pipeline</strong> &mdash; horizontal bar split by status (in-progress, waiting for parts, completed, cancelled).</li>
+          <li><strong>Recent activity</strong> &mdash; last 10 events across services, clients, and invoices.</li>
+          <li><strong>Top clients</strong> &mdash; by service count or spend.</li>
+          <li><strong>Vehicle brands</strong> &mdash; distribution pie chart.</li>
+          <li><strong>Quick actions</strong> &mdash; one-click buttons for new service, new client, new vehicle, new employee.</li>
+        </ol>
+
+        <h2 id="dive">Dive deeper</h2>
+        <div class="card-grid">
+          <a class="doc-card" href="/workshop/dashboard/metrics/"><h3>Understanding the metrics</h3><p>What each number is calculated from.</p></a>
+          <a class="doc-card" href="/workshop/dashboard/charts/"><h3>Revenue &amp; activity charts</h3><p>How to read the 30-day trend and brand distribution.</p></a>
+          <a class="doc-card" href="/workshop/dashboard/quick-actions/"><h3>Quick actions</h3><p>The fastest way to create records.</p></a>
+        </div>
+
+        <h2 id="refresh">Refreshing</h2>
+        <p>The dashboard polls for updates on load. Pull-to-refresh on mobile, or click the circular refresh icon in the top-right on web and desktop. Most widgets update within a second; the 30-day revenue chart can take a little longer if you have lots of invoices.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Empty dashboard?</div>
+          <p>A brand-new account shows zeros across the board. Add a <a href="/workshop/clients/add/">client</a>, a <a href="/workshop/vehicles/add/">vehicle</a>, and create a <a href="/workshop/services/create/">service</a> to see the metrics come to life.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/billing/status/"><div class="label">&larr; Back</div><div class="title">Subscription status</div></a>
+          <a href="/workshop/dashboard/metrics/" class="next"><div class="label">Next &rarr;</div><div class="title">Metrics</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

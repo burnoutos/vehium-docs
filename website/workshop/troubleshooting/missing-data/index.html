@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Missing data | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="What to do if records you expected to see are missing in Vehium Workshop — sync, permissions, deletion, and recovery." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/troubleshooting/missing-data/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/troubleshooting/">Troubleshooting</a><span class="sep">/</span><span>Missing data</span></nav>
+        <h1>Missing data</h1>
+        <p class="lead">Records you expected to see but can&rsquo;t find.</p>
+
+        <h2 id="sync">First, rule out sync</h2>
+        <p>Vehium syncs in real time, but a flaky connection or a stale app cache can make records look missing.</p>
+        <ol>
+          <li>Pull-to-refresh on mobile, or click the circular refresh icon on web/desktop.</li>
+          <li>Sign out and sign back in.</li>
+          <li>On mobile, force-close the app and reopen.</li>
+        </ol>
+
+        <h2 id="filters">Check filters</h2>
+        <p>If a record is outside the currently applied filters, it won&rsquo;t appear. For example:</p>
+        <ul>
+          <li>Services list has a <strong>status tab</strong> &mdash; if you&rsquo;re on <em>Completed</em> you won&rsquo;t see in-progress services.</li>
+          <li>Date-range filters may be narrower than you think. Clear the date range.</li>
+          <li>Client/vehicle list search boxes may still have text in them.</li>
+        </ul>
+
+        <h2 id="permissions">Permissions</h2>
+        <p>If a teammate created a record as <strong>Private</strong>, only they and admins can see it. Ask an admin to change it to Public, or ask the creator to share.</p>
+
+        <h2 id="deletion">Did someone delete it?</h2>
+        <p>The activity feed on the dashboard logs deletions, but only for the last 30 days. If a record was deleted in that window, email support with the approximate date and record name &mdash; we can restore it from backup during the 35-day disaster-recovery window.</p>
+
+        <h2 id="different-workshop">Are you on the right account?</h2>
+        <p>Multi-workshop users: check the workshop selector in the top-left. Records in other workshops don&rsquo;t show up in the current one.</p>
+
+        <h2 id="contact">Still missing?</h2>
+        <p>Email <a href="mailto:info@vehium.com">info@vehium.com</a>. Include:</p>
+        <ul>
+          <li>The type of record (client / vehicle / service / invoice).</li>
+          <li>Identifying details (name, plate, invoice number).</li>
+          <li>When you last saw it.</li>
+          <li>Who might have deleted it, if anyone.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/troubleshooting/payment/"><div class="label">&larr; Back</div><div class="title">Payment</div></a>
+          <a href="/workshop/faq/" class="next"><div class="label">Next &rarr;</div><div class="title">FAQ</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

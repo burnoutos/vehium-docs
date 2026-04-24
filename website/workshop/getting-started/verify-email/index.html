@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Verify your email | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="How the email verification step works for new Vehium Workshop accounts, and what to do if the link has expired." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/getting-started/verify-email/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/getting-started/">Getting started</a><span class="sep">/</span><span>Verify your email</span></nav>
+        <h1>Verify your email</h1>
+        <p class="lead">We send a verification link to your workshop email address to confirm you own it and to protect the account from being hijacked.</p>
+
+        <h2 id="what-arrives">What arrives</h2>
+        <p>Within a minute of signing up, you&rsquo;ll get an email from <code>no-reply@vehium.com</code> titled something like <em>&ldquo;Verify your Vehium account&rdquo;</em>. The email contains a single <strong>Verify email</strong> button. Click it from the same device if possible.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Security note</div>
+          <p>The link takes you directly to <code>app.vehium.com/confirm-email</code> (or <code>dev-app.vehium.com</code> on staging). On mobile, the app opens automatically thanks to Apple Universal Links and Android App Links &mdash; you don&rsquo;t need to copy-paste the URL.</p>
+        </div>
+
+        <h2 id="expiry">Link expiry</h2>
+        <p>The verification link is valid for <strong>15 minutes</strong> as a security measure. If you click an expired link, you&rsquo;ll see a <em>Link expired</em> screen with a button to resend a fresh one.</p>
+
+        <h2 id="email-not-arriving">Email didn&rsquo;t arrive?</h2>
+        <ol>
+          <li><strong>Wait 1&ndash;2 minutes.</strong> Delivery can be delayed by corporate spam filters.</li>
+          <li><strong>Check spam / junk.</strong> Add <code>no-reply@vehium.com</code> to your contacts or allowlist.</li>
+          <li><strong>Resend</strong> from the confirmation screen, or sign up again with the same address &mdash; you won&rsquo;t create a duplicate account.</li>
+          <li><strong>Still nothing?</strong> Email <a href="mailto:info@vehium.com">info@vehium.com</a> from the address you signed up with.</li>
+        </ol>
+
+        <h2 id="after-verifying">After you verify</h2>
+        <p>Verifying the email activates your account and your <strong>7-day free trial</strong>. You&rsquo;re automatically redirected to the <a href="/workshop/getting-started/set-password/">password setup</a> screen.</p>
+
+        <div class="pager">
+          <a href="/workshop/getting-started/sign-up/"><div class="label">&larr; Back</div><div class="title">Sign up</div></a>
+          <a href="/workshop/getting-started/set-password/" class="next"><div class="label">Next &rarr;</div><div class="title">Set your password</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

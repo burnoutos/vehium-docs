@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Dashboard metrics explained | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="A field-by-field explanation of every metric shown on the Vehium Workshop dashboard, including how each is calculated." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/dashboard/metrics/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/dashboard/">Dashboard</a><span class="sep">/</span><span>Metrics</span></nav>
+        <h1>Metrics explained</h1>
+        <p class="lead">What every number on the dashboard means, and what it&rsquo;s calculated from.</p>
+
+        <h2 id="summary">Summary cards</h2>
+        <table>
+          <tr><th>Metric</th><th>Definition</th></tr>
+          <tr><td><strong>Total clients</strong></td><td>Every client record, regardless of age or activity.</td></tr>
+          <tr><td><strong>Total vehicles</strong></td><td>Every vehicle record currently in the system.</td></tr>
+          <tr><td><strong>Active services</strong></td><td>Services whose status is <em>In progress</em> or <em>Waiting for parts</em>.</td></tr>
+          <tr><td><strong>Completed today</strong></td><td>Services marked <em>Completed</em> between midnight (your workshop&rsquo;s time zone) and now.</td></tr>
+        </table>
+
+        <h2 id="growth">Growth cards</h2>
+        <table>
+          <tr><th>Metric</th><th>Definition</th></tr>
+          <tr><td><strong>New clients this month</strong></td><td>Clients whose created date falls in the current calendar month.</td></tr>
+          <tr><td><strong>New vehicles this month</strong></td><td>Same, for vehicles.</td></tr>
+          <tr><td><strong>Services created this month</strong></td><td>Service orders opened this month, regardless of completion.</td></tr>
+          <tr><td><strong>Services completed this month</strong></td><td>Services that transitioned to <em>Completed</em> this month.</td></tr>
+          <tr><td><strong>&Delta; vs last month</strong></td><td>The small percentage next to each card. Positive numbers are green, negative are red.</td></tr>
+        </table>
+
+        <h2 id="revenue">Revenue cards</h2>
+        <table>
+          <tr><th>Metric</th><th>Definition</th></tr>
+          <tr><td><strong>Monthly net</strong></td><td>Sum of invoice line-item totals (before VAT) for invoices dated this month.</td></tr>
+          <tr><td><strong>Monthly VAT</strong></td><td>Sum of VAT across those invoices.</td></tr>
+          <tr><td><strong>Monthly gross</strong></td><td>Net + VAT.</td></tr>
+          <tr><td><strong>Invoices issued this month</strong></td><td>Count of invoices with this month&rsquo;s date.</td></tr>
+        </table>
+
+        <h2 id="pipeline">Service pipeline</h2>
+        <p>A segmented bar showing the share of <strong>open</strong> services in each status:</p>
+        <ul>
+          <li><strong>In progress</strong> &mdash; work is being done.</li>
+          <li><strong>Waiting for parts</strong> &mdash; paused pending inventory.</li>
+          <li><strong>Scheduled</strong> &mdash; booked for a future date.</li>
+          <li><strong>Completed</strong> &mdash; work finished and signed off.</li>
+          <li><strong>Cancelled</strong> &mdash; will not be completed.</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Time zone</div>
+          <p>&ldquo;Today&rdquo; and &ldquo;this month&rdquo; use the time zone set in your <a href="/workshop/settings/workshop-profile/">workshop profile</a>. If dates look off, check that setting first.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/dashboard/"><div class="label">&larr; Back</div><div class="title">Dashboard overview</div></a>
+          <a href="/workshop/dashboard/charts/" class="next"><div class="label">Next &rarr;</div><div class="title">Charts</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

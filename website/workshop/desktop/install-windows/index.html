@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Install Vehium Workshop on Windows | Vehium Docs</title>
+    <meta name="description" content="Step-by-step install instructions for Vehium Workshop on Windows 10 and 11." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/desktop/install-windows/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/desktop/">Desktop</a><span class="sep">/</span><span>Windows</span></nav>
+        <h1>Install on Windows</h1>
+        <p class="lead">Takes about a minute on a modern PC.</p>
+
+        <h2 id="requirements">Requirements</h2>
+        <ul>
+          <li>Windows 10 (64-bit) version 1809 or later, or Windows 11.</li>
+          <li>Approximately <strong>300 MB</strong> free disk space.</li>
+          <li>An internet connection for sign-in (offline use after that is limited).</li>
+          <li>Admin rights on the PC to run the installer.</li>
+        </ul>
+
+        <h2 id="download">Download</h2>
+        <ol>
+          <li>Open <a href="https://vehium.com/#download">vehium.com/#download</a>.</li>
+          <li>Click <strong>Download for Windows</strong>. The installer is an NSIS <code>.exe</code> (~100 MB).</li>
+        </ol>
+
+        <h2 id="install">Install</h2>
+        <ol>
+          <li>Double-click the downloaded file (e.g. <code>Vehium Workshop Setup 3.0.6.exe</code>).</li>
+          <li>SmartScreen may warn &ldquo;Windows protected your PC&rdquo; &mdash; click <strong>More info &rarr; Run anyway</strong>. The installer is code-signed; SmartScreen calms down once it has seen enough installs.</li>
+          <li>Choose install scope: <strong>only me</strong> (no admin) or <strong>all users</strong> (admin required).</li>
+          <li>Accept the default install path or pick your own.</li>
+          <li>Click <strong>Install</strong> and wait a few seconds.</li>
+          <li>Tick <strong>Launch Vehium Workshop</strong> and click <strong>Finish</strong>.</li>
+        </ol>
+
+        <h2 id="first-launch">First launch</h2>
+        <p>On first open, the app window appears with the sign-in screen. Log in with your Vehium username and password &mdash; the app remembers you on subsequent launches.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Auto-start on boot</div>
+          <p>In the app, open <strong>Settings &rarr; Desktop</strong> (only visible in the desktop build) and toggle <strong>Start Vehium when Windows boots</strong>.</p>
+        </div>
+
+        <h2 id="updates">Updates</h2>
+        <p>The app checks for updates on every launch and installs them in the background. You&rsquo;ll see an update-ready banner when a new version is downloaded; click it to restart into the new version.</p>
+
+        <h2 id="uninstall">Uninstall</h2>
+        <ol>
+          <li>Open <strong>Settings &rarr; Apps &rarr; Installed apps</strong>.</li>
+          <li>Find <strong>Vehium Workshop</strong>.</li>
+          <li>Click <strong>Uninstall</strong> and confirm.</li>
+        </ol>
+
+        <div class="pager">
+          <a href="/workshop/desktop/"><div class="label">&larr; Back</div><div class="title">Desktop overview</div></a>
+          <a href="/workshop/desktop/install-macos/" class="next"><div class="label">Next &rarr;</div><div class="title">Install on macOS</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

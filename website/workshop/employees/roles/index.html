@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Roles and permissions | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="The roles system in Vehium Workshop — what Admin, Manager, Mechanic, and Receptionist can each do." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/employees/roles/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/employees/">Employees</a><span class="sep">/</span><span>Roles</span></nav>
+        <h1>Roles &amp; permissions</h1>
+        <p class="lead">Each employee has one or more roles. Roles control what they can see and change.</p>
+
+        <h2 id="roles">Built-in roles</h2>
+        <table>
+          <tr><th>Role</th><th>Can do</th><th>Can&rsquo;t do</th></tr>
+          <tr>
+            <td><strong>Admin</strong></td>
+            <td>Everything: manage subscription, delete workshop, change settings, revert completed services, manage employees.</td>
+            <td>Nothing is blocked.</td>
+          </tr>
+          <tr>
+            <td><strong>Manager</strong></td>
+            <td>Create and edit every record (clients, vehicles, services, invoices). View reports.</td>
+            <td>Billing, workshop deletion, creating other admins.</td>
+          </tr>
+          <tr>
+            <td><strong>Mechanic</strong></td>
+            <td>Create and update services. Add inspection items and photos. Mark services complete.</td>
+            <td>Edit invoices, delete records, access settings.</td>
+          </tr>
+          <tr>
+            <td><strong>Receptionist</strong></td>
+            <td>Create clients and vehicles. Create scheduled services. Read-only on in-progress services.</td>
+            <td>Edit prices on invoices, complete services, access reports.</td>
+          </tr>
+        </table>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Combining roles</div>
+          <p>An employee can hold multiple roles. Permissions are the <em>union</em> of all their roles &mdash; so a <em>Mechanic + Manager</em> gets Manager-level access.</p>
+        </div>
+
+        <h2 id="change">Changing someone&rsquo;s roles</h2>
+        <ol>
+          <li>Open the employee&rsquo;s detail page.</li>
+          <li>Click <strong>Edit</strong>.</li>
+          <li>In the Roles multi-select, add or remove roles.</li>
+          <li>Click <strong>Save</strong>. The employee&rsquo;s permissions update on their next API call (within seconds).</li>
+        </ol>
+
+        <h2 id="admin-risk">Admin is powerful &mdash; use sparingly</h2>
+        <p>Admins can delete the workshop and change billing. Only grant Admin to people you fully trust with the business. One or two admins total is usually the right number.</p>
+
+        <h2 id="public-private">Public vs private records</h2>
+        <p>Individual clients and vehicles have a <strong>Public / Private</strong> toggle. Private records are visible only to admins and the creator, regardless of role. This is a per-record override on top of roles.</p>
+
+        <div class="pager">
+          <a href="/workshop/employees/add/"><div class="label">&larr; Back</div><div class="title">Add an employee</div></a>
+          <a href="/workshop/employees/assigned-vehicles/" class="next"><div class="label">Next &rarr;</div><div class="title">Assigned vehicles</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

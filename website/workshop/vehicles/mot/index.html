@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>MOT history | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Log MOT tests, track expiry, and alert customers automatically in Vehium Workshop." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/mot/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/vehicles/">Vehicles</a><span class="sep">/</span><span>MOT history</span></nav>
+        <h1>MOT history</h1>
+        <p class="lead">Every MOT test a vehicle has had, with automatic expiry tracking and customer alerts.</p>
+
+        <h2 id="add">Adding an MOT entry</h2>
+        <ol>
+          <li>Open the vehicle&rsquo;s detail page.</li>
+          <li>Scroll to the <strong>MOT history</strong> section.</li>
+          <li>Click <strong>+ Add MOT</strong>.</li>
+          <li>Fill in the form and save.</li>
+        </ol>
+
+        <h2 id="fields">MOT fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+          <tr><td>Test date</td><td>Yes</td><td>The day the test was performed.</td></tr>
+          <tr><td>Expiry date</td><td>Yes</td><td>When this certificate expires. Used for alerts.</td></tr>
+          <tr><td>Result</td><td>Yes</td><td>Scheduled / Pass / Fail / Advisory.</td></tr>
+          <tr><td>Testing center</td><td>Optional</td><td>Name of the station.</td></tr>
+          <tr><td>Certificate number</td><td>Optional</td><td>Official reference.</td></tr>
+          <tr><td>Advisory notes</td><td>Optional</td><td>Free text &mdash; use for <em>advisory</em> or failed-item details.</td></tr>
+        </table>
+
+        <h2 id="expiry">Expiry tracking</h2>
+        <p>Every entry shows a visual badge based on how far away the expiry date is:</p>
+        <ul>
+          <li><strong>Green</strong> &mdash; more than 60 days away.</li>
+          <li><strong>Amber</strong> &mdash; 60 to 30 days away.</li>
+          <li><strong>Red</strong> &mdash; 30 days or fewer, or expired.</li>
+        </ul>
+
+        <h2 id="alerts">Customer alerts</h2>
+        <p>If the vehicle is synced to a Vehium customer-app user (via matching client email), the vehicle owner automatically receives:</p>
+        <ul>
+          <li>A push notification 30 days before expiry.</li>
+          <li>A second push 7 days before expiry.</li>
+          <li>An email summary 3 days before expiry.</li>
+        </ul>
+
+        <h2 id="edit-delete">Editing and deleting entries</h2>
+        <p>Click the row to edit; the pencil icon opens the same form. Delete via the trash icon &mdash; deletion is immediate but logged internally.</p>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Tip</div>
+          <p>Log an <strong>Advisory</strong> entry with the advisory list in the notes even when the car passes &mdash; it&rsquo;s useful for follow-up reminders and proves due-diligence later.</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/vehicles/detail/"><div class="label">&larr; Back</div><div class="title">Vehicle detail</div></a>
+          <a href="/workshop/vehicles/photos/" class="next"><div class="label">Next &rarr;</div><div class="title">Vehicle photos</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

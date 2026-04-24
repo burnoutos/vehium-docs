@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Invoices and PDF export | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Create, edit, and export invoices from service orders in Vehium Workshop — line items, VAT, and PDF output." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/services/invoices/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Invoices</span></nav>
+        <h1>Invoices &amp; PDFs</h1>
+        <p class="lead">Every service can carry an invoice. Create it, add line items, and export as a professional PDF with your workshop header.</p>
+
+        <h2 id="create">Create an invoice</h2>
+        <ol>
+          <li>On the service page, scroll to <strong>Invoice</strong>.</li>
+          <li>Click <strong>+ Create invoice</strong>.</li>
+          <li>Start adding line items: name, unit price, quantity, VAT %.</li>
+          <li>Totals (net, VAT, gross) recalculate automatically after each row.</li>
+          <li>Click <strong>Save invoice</strong>.</li>
+        </ol>
+
+        <h2 id="line-items">Line-item fields</h2>
+        <table>
+          <tr><th>Field</th><th>Notes</th></tr>
+          <tr><td>Description</td><td>What you charged for &mdash; e.g. <em>Oil change (5W-30 synthetic)</em>.</td></tr>
+          <tr><td>Quantity</td><td>Decimal allowed. Default 1.</td></tr>
+          <tr><td>Unit price</td><td>Before VAT.</td></tr>
+          <tr><td>VAT %</td><td>Default is pulled from your <a href="/workshop/settings/workshop-profile/">workshop profile</a>. Override per-line if needed.</td></tr>
+        </table>
+
+        <h2 id="edit">Editing an existing invoice</h2>
+        <p>Click any existing line to edit it, or click <strong>+ Add line</strong> for a new row. Changes to prices update totals instantly. Use the trash icon to remove a line.</p>
+
+        <h2 id="pdf">Export as PDF</h2>
+        <p>On any saved invoice, three actions live in the toolbar:</p>
+        <ul>
+          <li><strong>Download</strong> &mdash; saves the PDF to your device.</li>
+          <li><strong>Print</strong> &mdash; opens the browser print dialog.</li>
+          <li><strong>Share</strong> (mobile) &mdash; opens the native share sheet.</li>
+        </ul>
+        <p>The PDF includes your <strong>workshop header</strong> (logo, name, VAT, address from your profile), <strong>customer details</strong>, the <strong>vehicle</strong>, the <strong>service description</strong>, the <strong>line items</strong>, and <strong>totals</strong> with VAT breakdown.</p>
+
+        <h2 id="vat">VAT handling</h2>
+        <p>VAT is calculated per-line based on the VAT% you entered. The invoice footer shows a breakdown: subtotal by VAT rate, total VAT, grand total. If your workshop has a VAT number set in the profile, it appears on the invoice.</p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Numbering</div>
+          <p>Invoice numbers are assigned sequentially per workshop. Once assigned, they cannot be reused &mdash; deleting an invoice does not free up its number (this matches most legal requirements for invoice registers).</p>
+        </div>
+
+        <div class="pager">
+          <a href="/workshop/services/photos/"><div class="label">&larr; Back</div><div class="title">Photos</div></a>
+          <a href="/workshop/services/complete/" class="next"><div class="label">Next &rarr;</div><div class="title">Marking complete</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

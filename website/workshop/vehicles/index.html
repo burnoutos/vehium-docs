@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Vehicles | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Manage vehicle records in Vehium Workshop: add, edit, MOT history, photos, and full service history with PDF export." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/vehicles/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><span>Vehicles</span></nav>
+        <h1>Vehicles</h1>
+        <p class="lead">Everything Vehium tracks for each car that comes through your workshop &mdash; identity, history, MOTs, and photos.</p>
+
+        <h2 id="what">What a vehicle record holds</h2>
+        <ul>
+          <li><strong>Identity:</strong> VIN, license plate, make, model, year, engine type, odometer.</li>
+          <li><strong>Owners:</strong> one or more linked clients.</li>
+          <li><strong>Service history:</strong> every service order you&rsquo;ve ever opened for this car.</li>
+          <li><strong>MOT history:</strong> dates, results, and expiry.</li>
+          <li><strong>Photos:</strong> shots you&rsquo;ve captured to document condition.</li>
+          <li><strong>Upcoming service:</strong> next service date and odometer.</li>
+        </ul>
+
+        <h2 id="start-here">Start here</h2>
+        <div class="card-grid">
+          <a class="doc-card" href="/workshop/vehicles/add/"><h3>Add a vehicle</h3><p>Every field and its validation rules.</p></a>
+          <a class="doc-card" href="/workshop/vehicles/detail/"><h3>Vehicle detail page</h3><p>A full tour of the screen.</p></a>
+          <a class="doc-card" href="/workshop/vehicles/mot/"><h3>MOT history</h3><p>Log tests and track expiry.</p></a>
+          <a class="doc-card" href="/workshop/vehicles/photos/"><h3>Vehicle photos</h3><p>Camera &amp; upload, organized per vehicle.</p></a>
+          <a class="doc-card" href="/workshop/vehicles/service-history/"><h3>Service log &amp; PDF</h3><p>Export selected services as a single PDF.</p></a>
+        </div>
+
+        <h2 id="search">Searching</h2>
+        <p>The Vehicles list supports partial match on:</p>
+        <ul>
+          <li><strong>Make</strong> (e.g. <code>toy</code> &rarr; Toyota)</li>
+          <li><strong>Model</strong></li>
+          <li><strong>Year</strong></li>
+          <li><strong>License plate</strong></li>
+          <li><strong>VIN</strong></li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/clients/history/"><div class="label">&larr; Back</div><div class="title">Client service history</div></a>
+          <a href="/workshop/vehicles/add/" class="next"><div class="label">Next &rarr;</div><div class="title">Add a vehicle</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

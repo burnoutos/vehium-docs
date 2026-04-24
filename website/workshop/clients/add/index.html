@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Add a client | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="Create a new client record in Vehium Workshop — every field explained, with validation rules." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/clients/add/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/clients/">Clients</a><span class="sep">/</span><span>Add</span></nav>
+        <h1>Add a client</h1>
+        <p class="lead">Create a new client record. Takes about 30 seconds.</p>
+
+        <h2 id="how">How to open the form</h2>
+        <p>Three ways:</p>
+        <ul>
+          <li><strong>Clients page</strong> &rarr; click <strong>+ New client</strong> in the top-right.</li>
+          <li><strong>Dashboard</strong> &rarr; click the <strong>New client</strong> quick action.</li>
+          <li><strong>Service creation</strong> &rarr; in the vehicle picker, click <strong>New client</strong> to create one inline.</li>
+        </ul>
+
+        <h2 id="fields">Fields</h2>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+          <tr><td>First name</td><td>Yes</td><td>Up to 100 characters.</td></tr>
+          <tr><td>Last name</td><td>Yes</td><td>Up to 100 characters.</td></tr>
+          <tr><td>Email</td><td>Recommended</td><td>Enables linking to the Vehium customer app. Must be valid email format if provided.</td></tr>
+          <tr><td>Phone</td><td>Recommended</td><td>International format supported. A country-code selector is shown next to the number field.</td></tr>
+          <tr><td>Street address</td><td>Optional</td><td>Shown on invoices.</td></tr>
+          <tr><td>City</td><td>Optional</td><td>&nbsp;</td></tr>
+          <tr><td>State / province</td><td>Optional</td><td>&nbsp;</td></tr>
+          <tr><td>Postal code</td><td>Optional</td><td>&nbsp;</td></tr>
+          <tr><td>Country</td><td>Optional</td><td>Dropdown, defaults to your workshop&rsquo;s country.</td></tr>
+        </table>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Email first, vehicle second</div>
+          <p>Fill in the client&rsquo;s email before adding their vehicle. Vehium uses the email to link the vehicle to the customer app, so alerts (like MOT reminders) appear on the vehicle owner&rsquo;s phone.</p>
+        </div>
+
+        <h2 id="after">After you save</h2>
+        <p>The client appears immediately in the Clients list. The form closes automatically; you can click <strong>Save &amp; add another</strong> if you have a batch of clients to enter.</p>
+
+        <h2 id="errors">Common validation errors</h2>
+        <ul>
+          <li><em>Email already used</em> &mdash; another client has the same email. Search first, then edit rather than duplicating.</li>
+          <li><em>Invalid phone</em> &mdash; the number doesn&rsquo;t match the selected country&rsquo;s format. Try adjusting the country code.</li>
+          <li><em>Missing required field</em> &mdash; first or last name is blank.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/clients/"><div class="label">&larr; Back</div><div class="title">Clients overview</div></a>
+          <a href="/workshop/clients/edit/" class="next"><div class="label">Next &rarr;</div><div class="title">Edit or delete</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>
