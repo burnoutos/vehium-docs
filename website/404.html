@@ -4,20 +4,29 @@
     <!--#include virtual="/_partials/head-common.html" -->
     <title>Page not found | Vehium Docs</title>
     <meta name="robots" content="noindex" />
+    <style>
+      body { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+      .nf-wrap { max-width: 520px; width: 100%; text-align: center; }
+      .nf-code { font-size: 72px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; line-height: 1; }
+      .nf-lead { font-size: 17px; color: var(--text-muted); margin-bottom: 28px; line-height: 1.55; }
+      .nf-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 10px 18px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: var(--bg-card);
+        color: var(--text);
+        font-size: 14.5px; font-weight: 500;
+        transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+      }
+      .nf-btn:hover { border-color: var(--border-hover); background: var(--surface); }
+    </style>
   </head>
   <body>
-    <!--#include virtual="/_partials/header.html" -->
-    <main class="docs-layout" style="grid-template-columns: 1fr; max-width: 720px;">
-      <article class="content" style="max-width:none; padding-top:80px; text-align:center;">
-        <h1 style="font-size:64px;">404</h1>
-        <p class="lead">The page you&rsquo;re looking for doesn&rsquo;t exist or has moved.</p>
-        <p>
-          <a href="/" class="doc-card" style="display:inline-block; margin-top:8px;">
-            <h3 style="margin:0;">&larr; Back to docs home</h3>
-          </a>
-        </p>
-      </article>
-    </main>
-    <!--#include virtual="/_partials/footer.html" -->
+    <div class="nf-wrap">
+      <div class="nf-code">404</div>
+      <p class="nf-lead">The page you&rsquo;re looking for doesn&rsquo;t exist or has moved.</p>
+      <a href="/" class="nf-btn">&larr; Back to docs home</a>
+    </div>
   </body>
 </html>
