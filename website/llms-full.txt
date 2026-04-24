@@ -1,12 +1,29 @@
-# Vehium Workshop — Complete Documentation (Markdown Summary)
+# Vehium — Complete Documentation (Markdown Summary)
 
-> This file is a condensed, single-document summary of the full Vehium Workshop documentation, intended for ingestion by LLMs. For the human-readable articles with full detail, see https://docs.vehium.com/workshop/.
+> A condensed, single-document summary of the full Vehium end-user docs, intended for ingestion by LLMs. For the human-readable articles with full detail, see https://docs.vehium.com/. Covers both apps: Vehium Workshop (for workshops) and Vehium (the customer app for vehicle owners).
 
 ---
 
+## Platform at a glance
+
+Vehium is a garage management platform with two end-user apps:
+
+- **Vehium Workshop** — for mechanics, service advisors, and garage owners. Web, desktop (Windows/macOS), iOS, and Android. Bundle `com.atheod.BurnoutOSPortal`, served at app.vehium.com.
+- **Vehium** (customer app) — for **vehicle owners** who want to see their service history, MOT reminders, and workshop notifications in one place. iOS, Android, and web. Bundle `com.atheod.BurnoutOSCustomer`, served at customer.vehium.com.
+
+Both apps share the same backend. A customer's vehicles and service history appear in the customer app automatically when the workshop's client-record email matches the customer-app account email — no codes, no manual pairing.
+
+Pricing: Vehium Workshop is subscription-based (7-day trial, then paid plans). The customer app is free.
+
+Languages: English, Greek, Bulgarian, German, Spanish, French, Italian, Russian.
+
+---
+
+# Vehium Workshop (for workshops)
+
 ## What Vehium Workshop is
 
-Vehium Workshop (app bundle `com.atheod.BurnoutOSPortal`, served at app.vehium.com) is an all-in-one garage management platform for auto-repair workshops. It runs on web, Windows and macOS desktop, iOS, and Android. All features sync across devices.
+Vehium Workshop (`com.atheod.BurnoutOSPortal`, served at app.vehium.com) is an all-in-one garage management platform for auto-repair workshops. It runs on web, Windows and macOS desktop, iOS, and Android. All features sync across devices.
 
 ## Getting started
 
@@ -37,6 +54,7 @@ A client is a person/company whose vehicles you service. Fields: first and last 
 - **Detail page**: header card with identity and actions (Edit/Delete), Vehicles section (link existing or create new), Service history section (filter by status/date/vehicle). Visibility: public (all users) or private (admins + creator only).
 - **Linking vehicles**: attach via picker, create inline, or remove link. A vehicle can have multiple owners.
 - **Delete**: unlinks vehicles and services (they stay in system as "Owner removed"). Irreversible. Support can restore within 30 days.
+- **Email matters**: the email on a client record is what pairs the client to the customer app. Use the same email the customer signs up with.
 
 ## Vehicles
 
@@ -84,23 +102,25 @@ Schedule view: Today pane, This week pane, Blocked pane (services waiting for pa
 
 Electron wrapper of the web build. Windows 10+ (signed NSIS installer, ~100MB, ~300MB installed) and macOS 11+ (signed+notarized DMG, ~120MB, ~350MB installed). Auto-updates in background; restart to activate. Logs at `%APPDATA%\Vehium\logs\main.log` (Windows) or `~/Library/Application Support/Vehium/logs/main.log` (macOS).
 
-## Localization
-
-Supported: English (en), Greek (el), Bulgarian (bg), German (de), Spanish (es), French (fr), Italian (it), Russian (ru). Changes UI only — user-entered data unchanged.
-
-## Security
+## Workshop security
 
 - TLS 1.3 in transit, AES-256 at rest on Google Cloud Platform.
 - Payments handled entirely by Stripe (PCI-DSS Level 1).
 - No 2FA yet — use unique strong password + password manager.
 - Account auto-locks after 10 failed login attempts for 15 minutes.
 
-## App facts
+## Workshop troubleshooting
+
+- **Can't sign in**: use Forgot password on the login screen. Reset link valid 60 minutes. Locked accounts clear after 15 minutes.
+- **Payment issues**: check Stripe receipt email for failure reason. Common: expired card, 3DS challenge not completed, insufficient funds. Resolve via Settings → Billing → Manage subscription.
+- **Missing data**: check filters first (status, date range, assigned employee). If truly missing, contact support within 30 days — items are recoverable from soft-delete.
+
+## Workshop app facts
 
 | | |
 |---|---|
 | Name | Vehium Workshop |
-| Current version | 3.0.6 |
+| Current version | 3.0.7 |
 | Web | app.vehium.com (prod), dev-app.vehium.com (staging) |
 | iOS bundle | com.atheod.BurnoutOSPortal |
 | Android package | com.atheod.BurnoutOSPortal |
@@ -110,37 +130,145 @@ Supported: English (en), Greek (el), Bulgarian (bg), German (de), Spanish (es), 
 
 ---
 
-## Customer app (Vehium — for vehicle owners) — summary
+# Vehium (customer app, for vehicle owners)
 
-Bundle `com.atheod.BurnoutOSCustomer`, served at customer.vehium.com. The companion app for vehicle owners. Shows vehicles the customer owns, service history the workshop logged, MOT expiry reminders (push at -30d/-7d, email at -3d), push notifications on service changes, and photos. Pairs automatically when workshop client email matches customer account email.
+## What the Vehium customer app is
 
-### Getting started
-Sign up on iOS (App Store), Android (Google Play), or web (customer.vehium.com) with the email the workshop has on file. Verify via emailed link. Minimum 8-character password. No credit card — the customer app is free.
+Vehium (`com.atheod.BurnoutOSCustomer`, served at customer.vehium.com) is the companion app for vehicle owners whose workshop uses Vehium Workshop. It's read-only over the workshop's data for that vehicle owner — vehicles, service history, MOT records, and photos. Free. iOS, Android, and web.
 
-### Pairing with a workshop
-One-way read-only. When a workshop client email matches the customer account email, Vehium automatically links the vehicles, service history, MOT history, and photos. Works across multiple workshops — all vehicles merge into a single list. If nothing appears, the workshop should update the client email and the customer refreshes.
+## Getting started
 
-### Vehicles
-Vehicles are created and owned by the workshop; the customer app is read-only for vehicle records. Each vehicle shows make/model/year, plate, MOT status badge (valid / due soon / expired), service history, MOT history, and photos. Shared vehicles (family cars, fleet) can be linked to multiple clients — both parties see identical data.
+- **Sign up** on iOS (App Store), Android (Google Play), or web (customer.vehium.com).
+- **Fields**: first name (required), last name (optional), email (required — use the email your workshop has on file), accept terms.
+- **Email verification**: verify via emailed link. Link activates the account; sign in afterwards.
+- **Password**: minimum 8 characters. Passphrase recommended over complex-char rules.
+- **No credit card**: the customer app is free.
 
-### Service history
-Sorted newest-first. Each service shows status (scheduled / in progress / completed), date in/out, mileage, inspection items, parts and labour line items, photos, workshop notes, and a downloadable invoice PDF for completed services. Live updates as the workshop changes status or adds photos/notes. Full vehicle log export available as a single PDF.
+## Pairing with a workshop
 
-### MOT reminders
-Push at 30 days and 7 days before expiry, email at 3 days, both on expiry day. Push requires notifications enabled at the system level. MOT history (date, result, odometer, advisories) is logged by the workshop and surfaced in the customer app.
+Automatic, email-based, and read-only.
 
-### Photos
-Mixed gallery: workshop-uploaded and customer-uploaded. Customers can add photos from camera or library (max 50 per vehicle, auto-resized to 2048 px longest side). Workshop photos can only be deleted by the workshop.
+- When your customer-app email matches a workshop's client-record email, Vehium links your account to that workshop's records for you.
+- You get: vehicles the workshop has on file for you, complete service history, MOT history, photos, notes.
+- You do not get: ability to edit service records, invoices, or MOT entries — those are owned by the workshop.
+- **Multiple workshops**: if more than one workshop has your email on file, Vehium pairs with all of them and merges the vehicles into a single list.
+- **Adding you after you signed up**: pairing runs automatically when a workshop adds a client with your email. You get a notification and the new vehicles appear on the next app refresh.
+- **Email mismatch fix**: if nothing appears after sign-in, ask the workshop to update the email on your client record, then pull down to refresh (or sign out and back in).
 
-### Account
-Settings → Profile (name, phone, photo), Password, Appearance (light/dark/system, language), Notifications (per-category switches + quiet hours), Export my data (ZIP of JSON + photos), Delete account (permanent, keeps workshop business records but unlinks personal data). Email change requires support.
+## Your vehicles
 
-### Notifications
-Categories: service scheduled/started/completed, photos & notes, MOT reminders, workshop pairing. Each can be toggled. Completion emails include an invoice link. Quiet hours deliver pushes silently; emails are unaffected.
+- Vehicles are created and owned by the workshop. The customer app is read-only.
+- List view: make/model/year, plate, MOT status badge, workshop name (when paired with more than one).
+- Status badge: **valid** (>30 days to expiry), **due soon** (≤30 days), **expired** (past expiry date).
+- Detail page: full specs (engine, fuel, colour, VIN if entered), service history, MOT history, photos.
+- **Can't add vehicles yourself** — ask the workshop to add the vehicle, then refresh. This keeps service history authoritative.
+- **Shared vehicles**: one car can be linked to multiple clients (family vehicles, shared fleet). Both appear in both customer accounts with identical data.
 
-### Troubleshooting
-Most common: email mismatch between workshop client record and customer account (fix: workshop updates email, customer refreshes). Push issues: system permissions, Do Not Disturb / Focus on iOS, quiet hours in-app. Password reset links expire after 60 minutes.
+## Service history
+
+Sorted newest-first on the vehicle detail page.
+
+Each service entry shows:
+- Status: scheduled, in progress, or completed.
+- Date in and date out.
+- Mileage at the start.
+- Inspection items performed (e.g. brake pads, oil and filter, timing belt).
+- Parts and labour line items with totals.
+- Photos (before/after, damage, receipts).
+- Workshop notes.
+- Invoice PDF for completed services.
+
+**Live updates**: status, notes, and photos update in real time; push notifications fire on scheduled / started / completed.
+
+**PDF invoice** includes: workshop name / address / VAT, your name and vehicle details, line items, subtotal / VAT / grand total, legal reference number.
+
+**Full vehicle log export**: single PDF with every service, every MOT, every photo for a vehicle. Useful when selling or switching workshops.
+
+## MOT reminders
+
+Reminder schedule:
+
+| When | Channel |
+|---|---|
+| 30 days before expiry | Push |
+| 7 days before expiry | Push |
+| 3 days before expiry | Email |
+| On expiry day | Push and email |
+
+- Push requires notifications enabled at the system level and in-app.
+- MOT history (date, result, odometer, advisories, certificate ref) is logged by the workshop and surfaced here.
+- If the test was done elsewhere, ask the workshop to add it so reminders stay accurate.
+
+## Photos
+
+- Mixed gallery on each vehicle: workshop-uploaded and customer-uploaded.
+- Customer can add from camera or library. Up to **50 photos per vehicle** that you upload yourself. Auto-resized to max 2048 px longest side.
+- Workshop photos have no limit (counted against workshop's quota) and can only be removed by the workshop.
+- Service-specific photos appear both on the service and in the vehicle gallery.
+
+## Account
+
+Settings:
+
+- **Profile**: first/last name, phone, avatar. Email is read-only from the app — changes require contacting support so pairing migrates cleanly.
+- **Password**: change current password; minimum 8 characters.
+- **Appearance**: light / dark / follow system; language (8 options or follow system).
+- **Sign out**: ends this device's session; data stays server-side.
+- **Export my data**: emails a ZIP with all vehicles, service history, and photos (JSON + original images).
+- **Delete account**: permanent, removes personal data and all pairings. Workshop business records (services, invoices) are retained by the workshop as part of their books, unlinked from the customer.
+
+## Notifications
+
+Categories (each can be toggled independently in Settings → Notifications):
+
+| Event | Push | Email |
+|---|---|---|
+| A service is scheduled for your vehicle | Yes | No |
+| Workshop starts the service | Yes | No |
+| Workshop completes the service | Yes | Yes (with invoice link) |
+| Workshop adds photos or notes | Yes | No |
+| MOT expires in 30 days | Yes | No |
+| MOT expires in 7 days | Yes | No |
+| MOT expires in 3 days | No | Yes |
+| A new workshop pairs with you | Yes | Yes |
+
+- **Enable push on iOS**: Settings → Vehium → Notifications → Allow Notifications.
+- **Enable push on Android**: Settings → Apps → Vehium → Notifications → enable.
+- **Enable push on web**: accept the browser permission prompt; re-enable via the lock icon in the address bar if missed.
+- **Quiet hours**: set a window (e.g. 10 pm – 7 am) during which pushes deliver silently. Emails unaffected.
+
+## Customer-app troubleshooting
+
+- **Vehicles aren't showing up**: email mismatch between workshop client record and customer-app account. Workshop updates the email; customer pulls to refresh.
+- **Not getting notifications**: (1) system permissions, (2) in-app category is on, (3) quiet hours inactive, (4) iOS Focus filter not excluding Vehium.
+- **Verification email missing**: wait 1–2 minutes; check spam; add `no-reply@vehium.com` to contacts; request again from sign-in screen.
+- **Forgot password**: reset link on sign-in; expires after 60 minutes; request a fresh one if expired.
+- **App stuck loading**: check internet; force-quit and reopen; sign out/in; update to latest App Store / Google Play version.
+- **Service history outdated**: pull to refresh; if a recent service is still missing, ask the workshop to confirm it's out of draft state.
+
+## Customer app facts
+
+| | |
+|---|---|
+| Name | Vehium |
+| iOS bundle | com.atheod.BurnoutOSCustomer |
+| Android package | com.atheod.BurnoutOSCustomer |
+| Web | customer.vehium.com |
+| Price | Free |
+| Pairing | Automatic by email — workshop client email matches customer account email |
+| Languages | English, Greek, Bulgarian, German, Spanish, French, Italian, Russian |
+| Minimum password | 8 characters |
+| Photos per vehicle (customer-uploaded) | 50 max, 2048 px resize |
+| MOT push reminders | -30 days, -7 days, on expiry |
+| MOT email reminders | -3 days, on expiry |
+
+---
 
 ## Support
 
-Email info@vehium.com with workshop name, exact error/screenshot, time + time zone, device, and (for desktop) the log file. Billing issues prioritized. Privacy/data requests go to info@vehium.com.
+Email info@vehium.com.
+
+- **Workshop support**: include workshop name, exact error/screenshot, time + time zone, device, and (for desktop) the log file. Billing issues prioritized.
+- **Customer-app support**: include your account email, the vehicle or service involved, and a screenshot if you can.
+- **Privacy / data requests** (access, correction, deletion): info@vehium.com.
+- **Typical response time**: one business day.
