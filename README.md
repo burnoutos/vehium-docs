@@ -1,40 +1,51 @@
 # Vehium Docs
 
-End-user documentation for the [Vehium](https://vehium.com) platform, served at [docs.vehium.com](https://docs.vehium.com).
+Official end-user documentation for **[Vehium](https://vehium.com)** — modern garage management for workshops and the people whose vehicles they look after.
 
-This is a static HTML site — no build step, no framework. Edit the HTML directly.
+**Live at [docs.vehium.com](https://docs.vehium.com)**
 
-## What's in here
+---
 
-```
-website/
-├── index.html            Docs landing page
-├── workshop/             Vehium Workshop (workshop/garage app) docs
-├── customer/             Vehium (end-customer app) docs
-├── _partials/            Shared header/footer/sidebar (Nginx SSI)
-├── css/docs.css          Design tokens + docs layout
-├── js/docs.js            Theme toggle, search, sidebar
-├── img/                  Shared images, logos, screenshots
-├── sitemap.xml           All docs pages with lastmod
-├── llms.txt              AI-crawler-friendly site summary
-├── llms-full.txt         Full content mirror for LLMs
-├── robots.txt
-├── Dockerfile            nginx:stable-alpine static server
-├── nginx.conf            SSI + redirects + security headers
-└── docker-build.bat      Local build helper
-manifests/
-├── vehium-docs.yaml         Deployment + Service + PDB
-└── vehium-docs-ingress.yaml Traefik ingress for docs.vehium.com
-```
+## What you'll find
 
-## Writing docs
+|                                                          |                                                                                                                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **[Vehium Workshop](https://docs.vehium.com/workshop/)** | For mechanics, service advisors, and garage owners. Clients, vehicles, services, employees, invoices, and reports — on web, desktop, iOS, and Android. |
+| **[Vehium](https://docs.vehium.com/customer/)**          | For vehicle owners. Track MOT expiry, get service reminders, and see what your garage has done to your vechiles.                                       |
 
-1. Each page lives at its canonical URL: `workshop/clients/index.html` serves `/workshop/clients/`.
-2. Every page includes `_partials/head.html`, `_partials/header.html`, the appropriate sidebar, and `_partials/footer.html` via Nginx SSI (`<!--#include virtual="..." -->`).
-3. Add the new URL to `sitemap.xml` and, if it's user-facing, to `llms.txt`.
-4. Every page should also be mirrored as a `.md` file next to it (e.g. `workshop/clients/index.md`) — this is what AI crawlers ingest.
+### Popular articles
 
-## Local preview
+- [Create a workshop account](https://docs.vehium.com/workshop/getting-started/sign-up/)
+- [Create your first service](https://docs.vehium.com/workshop/services/create/)
+- [Managing MOT history](https://docs.vehium.com/workshop/vehicles/mot/)
+- [Upgrading your subscription](https://docs.vehium.com/workshop/billing/subscription/)
+- [Install the desktop app](https://docs.vehium.com/workshop/desktop/install-windows/)
+- [Troubleshooting](https://docs.vehium.com/workshop/troubleshooting/)
+
+---
+
+## Found a typo or something unclear?
+
+We'd love a fix. The docs are open source — every page is plain HTML, no build step, no framework.
+
+1. Click the page on [docs.vehium.com](https://docs.vehium.com) you want to improve.
+2. Find the matching file under `website/` (e.g. `/workshop/clients/` → `website/workshop/clients/index.html`).
+3. Edit it and open a pull request.
+
+For anything bigger, please [open an issue](https://github.com/burnoutos/vehium-docs/issues) first so we can chat about it.
+
+## Need help?
+
+If something in the product isn't working — not a docs issue — email **info@vehium.com**.
+
+---
+
+## For developers
+
+<details>
+<summary>Run the docs locally</summary>
+
+The site is served by `nginx:stable-alpine` with Server-Side Includes (SSI) for shared partials.
 
 ```bash
 cd website
@@ -43,10 +54,29 @@ docker run --rm -p 8080:80 vehium-docs
 # open http://localhost:8080
 ```
 
-## Deploy
+</details>
 
-Container is pushed to `ghcr.io/burnoutos/vehium-docs:latest` and rolled out to the `bos` Kubernetes namespace. Ingress binds `docs.vehium.com`.
+<details>
+<summary>Repository layout</summary>
+
+```
+website/
+├── index.html        Landing page
+├── workshop/         Workshop app docs
+├── customer/         Customer app docs
+├── _partials/        Shared header, footer, sidebars (SSI)
+├── css/  js/  img/   Assets
+├── llms.txt          AI-crawler-friendly site summary
+├── llms-full.txt     Full content mirror for LLMs
+├── sitemap.xml
+├── Dockerfile
+└── nginx.conf
+
+manifests/            Kubernetes deployment, service, ingress
+```
+
+</details>
 
 ## License
 
-(c) Vehium / BurnoutOS. All documentation content is published publicly so end users and AI assistants can reference it.
+[MIT](LICENSE) — content is published publicly so end users and AI assistants can freely reference it.

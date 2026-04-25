@@ -42,8 +42,25 @@
           <li>Confirm the proration on the summary screen &mdash; upgrading charges the difference immediately; downgrading credits the difference to your next invoice.</li>
         </ol>
 
-        <h2 id="cancel">Cancelling</h2>
-        <p>You can cancel any time from <strong>Settings &rarr; Billing &rarr; Manage subscription</strong>. The subscription stays active through the paid-through date, then moves to <strong>Payment required</strong>. Data is preserved as described in <a href="/workshop/billing/trial/">the trial article</a>.</p>
+        <h2 id="cancel">Cancelling your subscription</h2>
+        <p>Subscriptions are managed by Stripe. To stop a subscription you have to cancel it inside the <strong>Stripe customer portal</strong> &mdash; this is the only place a cancellation can be made.</p>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>Click <strong>Manage subscription</strong>. This opens the Stripe customer portal in a new tab.</li>
+          <li>Click <strong>Cancel plan</strong> and confirm.</li>
+          <li>Your subscription stays active through the paid-through date, then stops automatically.</li>
+        </ol>
+        <p>After the period ends the account moves to <strong>Payment required</strong> &mdash; you can still sign in and view existing data, but creating or editing records is locked. See <a href="/workshop/billing/status/">Subscription status</a>. Data retention follows the rules in <a href="/workshop/billing/trial/">the trial article</a>.</p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Stripe will keep charging until you cancel</div>
+          <p>If you stop using Vehium but never cancel in the Stripe portal, Stripe will continue charging your card every month for as long as the card stays valid. Signing out, uninstalling the desktop or mobile app, or closing your browser does <strong>not</strong> cancel the subscription &mdash; only the Stripe customer portal does.</p>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Deleting your workshop cancels the subscription for you</div>
+          <p>If you <a href="/workshop/settings/delete-workshop/">delete your workshop</a> instead, the Stripe subscription is cancelled automatically &mdash; at the end of the current billing period during the 30-day grace, or immediately if you choose instant deletion. You don&rsquo;t need to cancel in the Stripe portal separately.</p>
+        </div>
 
         <h2 id="invoices">Invoices &amp; receipts</h2>
         <p>After every successful charge Stripe emails you a receipt. You can also download a PDF invoice for any past charge from <strong>Settings &rarr; Billing &rarr; Invoices</strong>.</p>

@@ -14,7 +14,8 @@
           { "@type": "Question", "name": "Does Vehium work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Partially. The desktop and mobile apps buffer short network drops and queue changes until connectivity returns. Sustained offline work isn't supported — you need a connection to sign in and sync." } },
           { "@type": "Question", "name": "Can multiple employees use the same account?", "acceptedAnswer": { "@type": "Answer", "text": "Technically possible but not recommended. Create a separate employee record for each team member so the activity log is accurate and you can revoke access individually." } },
           { "@type": "Question", "name": "How secure are my customer records?", "acceptedAnswer": { "@type": "Answer", "text": "Data is encrypted in transit (TLS 1.3) and at rest (AES-256) on Google Cloud Platform. Payment details are handled by Stripe and never touch Vehium servers." } },
-          { "@type": "Question", "name": "Can I export my data?", "acceptedAnswer": { "@type": "Answer", "text": "You can export individual invoices and service logs as PDF. Bulk export isn't in the UI today; contact support if you need a full archive." } }
+          { "@type": "Question", "name": "Can I export my data?", "acceptedAnswer": { "@type": "Answer", "text": "You can export individual invoices and service logs as PDF. Bulk export isn't in the UI today; contact support if you need a full archive." } },
+          { "@type": "Question", "name": "Can I cancel any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but you cancel inside Stripe — not Vehium. From Settings → Billing → Manage subscription, open the Stripe customer portal and click Cancel plan. Your subscription runs until the end of the paid period, then stops. If you never cancel, Stripe keeps charging your card every month; signing out or closing the app does not cancel the subscription." } }
         ]
       }
     </script>
@@ -56,7 +57,7 @@
         <p>Vehium has a companion app for vehicle owners (plain &ldquo;Vehium&rdquo;, as opposed to &ldquo;Vehium <em>Workshop</em>&rdquo;). Customers of your workshop can install it to see their vehicles, MOT reminders, and service history. See the <a href="/customer/">customer docs</a>.</p>
 
         <h2 id="cancel">Can I cancel any time?</h2>
-        <p>Yes. Cancel from <strong>Settings &rarr; Billing &rarr; Manage subscription</strong>. Your subscription runs until the end of the paid period, then stops. Data is preserved for 30 days in cold storage after lapse; up to 90 days total if you subscribe again.</p>
+        <p>Yes &mdash; but you cancel inside <strong>Stripe</strong>, not Vehium. From <strong>Settings &rarr; Billing &rarr; Manage subscription</strong>, click through to the Stripe customer portal and hit <strong>Cancel plan</strong>. Your subscription runs until the end of the paid period, then stops. If you never cancel, Stripe keeps charging your card every month &mdash; closing the app or signing out does not cancel anything. Full steps in <a href="/workshop/billing/subscription/#cancel">Cancelling your subscription</a>.</p>
 
         <div class="pager">
           <a href="/workshop/troubleshooting/missing-data/"><div class="label">&larr; Back</div><div class="title">Missing data</div></a>

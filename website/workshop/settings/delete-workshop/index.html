@@ -25,13 +25,18 @@
           <tr><th>Option</th><th>What happens</th></tr>
           <tr>
             <td><strong>30-day grace period (recommended)</strong></td>
-            <td>Workshop is scheduled for deletion 30 days from now. During that window you can sign in, view data, and <strong>cancel</strong> the pending deletion at any time. Billing is paused.</td>
+            <td>Workshop is scheduled for deletion 30 days from now. During that window you can sign in, view data, and <strong>cancel</strong> the pending deletion at any time. Your Stripe subscription is automatically set to <em>cancel at period end</em> &mdash; no further charges after the current month.</td>
           </tr>
           <tr>
             <td><strong>Delete immediately</strong></td>
-            <td>Workshop and all data are purged within minutes. Active subscription is cancelled.</td>
+            <td>Workshop and all data are purged within minutes. The Stripe subscription is cancelled immediately &mdash; any time already paid for is forfeited (no proration).</td>
           </tr>
         </table>
+
+        <div class="callout callout-info">
+          <div class="callout-title">You don&rsquo;t need to cancel in Stripe separately</div>
+          <p>Both options cancel the Stripe subscription for you. If you only want to stop billing but keep your account, don&rsquo;t delete the workshop &mdash; cancel through the <a href="/workshop/billing/subscription/#cancel">Stripe customer portal</a> instead.</p>
+        </div>
 
         <h2 id="how">How to start</h2>
         <ol>
