@@ -57,6 +57,7 @@
   {"title":"Pre-made service templates","url":"/workshop/services/templates/","keywords":"template premade checklist reuse bundle apply revert"},
   {"title":"Service photos","url":"/workshop/services/photos/","keywords":"service photos camera upload findings"},
   {"title":"Invoices and PDFs","url":"/workshop/services/invoices/","keywords":"invoice line items VAT PDF download print share"},
+  {"title":"Invoices (workshop list)","url":"/workshop/invoices/","keywords":"invoices list all tenant filter date range this month last month this year status issued draft cancelled search bulk select export accountant CSV per VAT rate PDF bundle dd/MM/yyyy"},
   {"title":"Marking a service complete","url":"/workshop/services/complete/","keywords":"complete service finish next service date odometer lock"},
 
   {"title":"Employees overview","url":"/workshop/employees/","keywords":"employees staff team logins"},

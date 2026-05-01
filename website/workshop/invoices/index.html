@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/_partials/head-common.html" -->
+    <title>Invoices | Vehium Workshop | Vehium Docs</title>
+    <meta name="description" content="The tenant-wide Invoices screen — filter by date range, slice by status, search across customers/plates, and bulk-export as accountant CSV or a multi-PDF bundle." />
+    <link rel="canonical" href="https://docs.vehium.com/workshop/invoices/" />
+  </head>
+  <body>
+    <!--#include virtual="/_partials/header.html" -->
+    <main class="docs-layout">
+      <!--#include virtual="/_partials/sidebar-workshop.html" -->
+      <article class="content">
+        <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><span>Invoices</span></nav>
+        <h1>Invoices</h1>
+        <p class="lead">A single screen for every invoice in your workshop. Pick a date range, filter by status, search by customer, vehicle plate or invoice number, then bulk-export the result as an accountant-ready CSV or a multi-invoice PDF bundle.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Where this lives</div>
+          <p>Open from the main menu: <strong>Invoices</strong>. This page is for managing invoices across the whole workshop. To create or edit an invoice on a specific job, see <a href="/workshop/services/invoices/">Invoices on a service</a>.</p>
+        </div>
+
+        <h2 id="overview">What you can do here</h2>
+        <ul>
+          <li>See every invoice in your workshop in one place.</li>
+          <li>Jump to <strong>this month</strong>, <strong>last month</strong>, <strong>this year</strong> or <strong>all time</strong> in a single tap.</li>
+          <li>Pick a custom <strong>From / To</strong> date range when the presets aren&rsquo;t enough.</li>
+          <li>Slice by status: <strong>Issued</strong>, <strong>Draft</strong>, <strong>Cancelled</strong>, <strong>All</strong>.</li>
+          <li>Search by invoice number, customer name or vehicle plate.</li>
+          <li>Select one or many invoices to <strong>bulk export</strong>.</li>
+          <li>Download an <strong>accountant CSV</strong> with per-VAT-rate columns, or a <strong>PDF bundle</strong> of the selected invoices.</li>
+          <li>Tap any row to open the full invoice editor.</li>
+        </ul>
+
+        <h2 id="quick-ranges">Quick date ranges</h2>
+        <p>The chips above the date pickers are the typical accountant workflow (<em>&ldquo;send me April&rdquo;</em>) in one tap:</p>
+        <table>
+          <tr><th>Preset</th><th>What it selects</th></tr>
+          <tr><td><strong>This month</strong></td><td>1st of the current month &rarr; today.</td></tr>
+          <tr><td><strong>Last month</strong></td><td>The full previous calendar month.</td></tr>
+          <tr><td><strong>This year</strong></td><td>1st January of the current year &rarr; today.</td></tr>
+          <tr><td><strong>All time</strong></td><td>No date limit &mdash; every invoice you&rsquo;ve ever issued.</td></tr>
+        </table>
+        <p>Picking a manual <strong>From</strong> or <strong>To</strong> clears the active preset so it&rsquo;s clear which range is currently filtering the list.</p>
+
+        <h2 id="status-filter">Status tabs</h2>
+        <p>Above the list, four tabs split the result by status:</p>
+        <ul>
+          <li><strong>Issued</strong> &mdash; invoices that have been finalised and given an invoice number. The default tab.</li>
+          <li><strong>Draft</strong> &mdash; works in progress that haven&rsquo;t been issued yet.</li>
+          <li><strong>Cancelled</strong> &mdash; invoices that were issued and then voided. Their numbers stay reserved (see the <a href="/workshop/services/invoices/#vat">numbering rules</a>).</li>
+          <li><strong>All</strong> &mdash; everything in the current date range, regardless of status.</li>
+        </ul>
+
+        <h2 id="search">Search</h2>
+        <p>The search box matches across three fields at once:</p>
+        <ul>
+          <li><strong>Invoice number</strong> &mdash; e.g. <code>INV-001245</code>.</li>
+          <li><strong>Customer name</strong> &mdash; the bill-to on the invoice.</li>
+          <li><strong>Vehicle plate</strong> &mdash; the plate of the car the service was for.</li>
+        </ul>
+        <p>Search runs on top of the active date range and status tab, so you can scope a search to <em>&ldquo;all unpaid invoices for AB-12-CD this year&rdquo;</em> in three taps.</p>
+
+        <h2 id="rows">Reading a row</h2>
+        <p>Each row shows everything you typically need before you decide whether to open it:</p>
+        <ul>
+          <li>Invoice number and status pill.</li>
+          <li>Bill-to (customer or company name).</li>
+          <li>Vehicle line: plate &middot; brand &middot; model.</li>
+          <li>Any notes you saved on the invoice (payment terms, references).</li>
+          <li>Issued date in <code>dd/MM/yyyy</code>.</li>
+          <li>Total amount in your workshop&rsquo;s currency.</li>
+        </ul>
+        <p>Tap the row to open the invoice editor; long-press (or tap the checkbox) to add it to the current selection without leaving the list.</p>
+
+        <h2 id="select">Selecting invoices</h2>
+        <p>Selection lives on the screen, not on the server &mdash; so it survives scrolling and pagination. Two helpers above the list make bulk work fast:</p>
+        <ul>
+          <li><strong>Select all visible</strong> &mdash; ticks every row currently in the filter.</li>
+          <li><strong>Clear selection</strong> &mdash; resets to zero ticked.</li>
+        </ul>
+        <p>Selection clears automatically when you change the date range, status tab or search term, so you never accidentally export invoices you can no longer see.</p>
+
+        <h2 id="export">Exporting</h2>
+        <p>Tap <strong>Export</strong> to open the picker. There are two outputs, in order of accountant value:</p>
+
+        <h3 id="export-csv">CSV (accountant)</h3>
+        <p>One row per invoice with <strong>per-VAT-rate columns</strong> &mdash; built for VAT returns and bookkeeping software.</p>
+        <ul>
+          <li>Runs on the <strong>current filter</strong> (date range + status + search). Selection is ignored &mdash; CSV always exports the full filter.</li>
+          <li>Dates land as <code>dd/MM/yyyy</code> so European bookkeepers don&rsquo;t need to reformat anything.</li>
+          <li>Columns include net, VAT and gross totals broken down per VAT rate (e.g. 0&thinsp;%, 13&thinsp;%, 24&thinsp;% as separate columns).</li>
+          <li>One file, one download &mdash; even for very large ranges.</li>
+        </ul>
+
+        <h3 id="export-pdf">PDF bundle</h3>
+        <p>A single PDF stitched from the selected invoices, ready to send to a customer or partner.</p>
+        <ul>
+          <li>Runs on the <strong>selection</strong> &mdash; you must tick at least one invoice for this option to be available.</li>
+          <li>Each invoice keeps its own page header, line items and VAT breakdown.</li>
+          <li>Past 100 invoices in a selection, the bundle is split into multiple files of up to 100 each. The download dialog shows progress (<em>&ldquo;Part 2 of 4&rdquo;</em>) and saves files one after another.</li>
+          <li>If a part fails, earlier parts stay saved and you can retry from the failed part.</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Don&rsquo;t close the dialog mid-bundle</div>
+          <p>Multi-part PDF exports run client-side, file by file. Closing the progress dialog cancels the remaining parts &mdash; the parts already saved are kept, but unsaved parts will need a retry from the resume point.</p>
+        </div>
+
+        <h2 id="permissions">Permissions</h2>
+        <p>Two permissions guard this screen:</p>
+        <ul>
+          <li><strong>Read invoices</strong> &mdash; required to see the list at all. Without it the screen shows a friendly &ldquo;no access&rdquo; message.</li>
+          <li><strong>Export invoices</strong> &mdash; required to use either CSV or PDF export. The Export button stays visible but is disabled when the role doesn&rsquo;t have it.</li>
+        </ul>
+        <p>Both are configured per role under <a href="/workshop/employees/roles/">Roles &amp; permissions</a>.</p>
+
+        <h2 id="tips">Tips</h2>
+        <ul>
+          <li>For monthly bookkeeping: <strong>Last month</strong> &rarr; <strong>Issued</strong> &rarr; <strong>Export &rarr; CSV</strong>. Three taps.</li>
+          <li>For a customer who asks for &ldquo;all my invoices this year&rdquo;: search their name, switch to <strong>This year</strong>, <strong>Select all visible</strong>, <strong>Export &rarr; PDF bundle</strong>.</li>
+          <li>For a quick sanity check on revenue: <strong>This year</strong> &rarr; <strong>Issued</strong> &mdash; the count and totals appear in the summary line above the list.</li>
+        </ul>
+
+        <div class="pager">
+          <a href="/workshop/services/invoices/"><div class="label">&larr; Back</div><div class="title">Invoices on a service</div></a>
+          <a href="/workshop/employees/" class="next"><div class="label">Next &rarr;</div><div class="title">Employees</div></a>
+        </div>
+      </article>
+      <aside class="toc"><h4>On this page</h4></aside>
+    </main>
+    <!--#include virtual="/_partials/footer.html" -->
+  </body>
+</html>

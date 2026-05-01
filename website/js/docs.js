@@ -35,12 +35,53 @@
 
   // ---- Mark the active sidebar link from current URL ----
   const path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/+$/, '/') || '/';
+  let activeLink = null;
   document.querySelectorAll('.sidebar a').forEach((a) => {
     const href = a.getAttribute('href');
     if (!href) return;
     const normalized = href.replace(/\/index\.html$/, '/').replace(/\/+$/, '/');
-    if (normalized === path) a.classList.add('active');
+    if (normalized === path) { a.classList.add('active'); activeLink = a; }
   });
+
+  // ---- Preserve sidebar scroll position across navigations ----
+  // Each docs page is a full reload, so the sticky sidebar resets to the top of the
+  // list every time. That meant clicking "Reports" then wanting to click "Settings"
+  // forced a long scroll back through the whole left rail. We persist the sidebar's
+  // scrollTop to sessionStorage on every link click and restore it on the next page
+  // — and as a fallback, scroll the active item into view if it ended up off-screen.
+  const sidebar = document.querySelector('.sidebar');
+  const SIDEBAR_SCROLL_KEY = 'vehium-docs-sidebar-scroll';
+  if (sidebar) {
+    // Save before the next page starts loading.
+    sidebar.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+      try { sessionStorage.setItem(SIDEBAR_SCROLL_KEY, String(sidebar.scrollTop)); }
+      catch (err) { /* ignore */ }
+    });
+    // Restore on load — if we have a saved value, use it; otherwise centre the active item.
+    let restored = false;
+    try {
+      const saved = sessionStorage.getItem(SIDEBAR_SCROLL_KEY);
+      if (saved !== null) {
+        sidebar.scrollTop = parseInt(saved, 10) || 0;
+        restored = true;
+      }
+    } catch (err) { /* ignore */ }
+    // After restore, double-check the active item is actually visible. If not (e.g.
+    // the user jumped sections via the breadcrumb, search, or a content link),
+    // bring it into view without animation so it lands stably above the fold.
+    if (activeLink) {
+      requestAnimationFrame(() => {
+        const a = activeLink.getBoundingClientRect();
+        const s = sidebar.getBoundingClientRect();
+        const visible = a.top >= s.top && a.bottom <= s.bottom;
+        if (!visible) {
+          activeLink.scrollIntoView({ block: restored ? 'nearest' : 'center' });
+        }
+      });
+    }
+  }
 
   // ---- Build right-column TOC from h2/h3 in .content ----
   const tocContainer = document.querySelector('.toc');

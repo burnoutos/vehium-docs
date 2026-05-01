@@ -21,6 +21,7 @@ Vehium has two end-user apps:
 - [Clients](https://docs.vehium.com/workshop/clients/): add, edit, search, client detail
 - [Vehicles](https://docs.vehium.com/workshop/vehicles/): vehicle records, photos, MOT reminders
 - [Services](https://docs.vehium.com/workshop/services/): service catalog, appointments
+- [Invoices](https://docs.vehium.com/workshop/invoices/): tenant-wide invoice list, quick date ranges, status filter, search, bulk-export to accountant CSV (per-VAT-rate columns) or multi-PDF bundle
 - [Employees](https://docs.vehium.com/workshop/employees/): staff management and permissions
 - [Reports](https://docs.vehium.com/workshop/reports/): revenue, service volume, exports
 - [Settings](https://docs.vehium.com/workshop/settings/): workshop profile, integrations, notifications
