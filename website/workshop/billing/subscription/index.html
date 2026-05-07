@@ -43,23 +43,37 @@
         </ol>
 
         <h2 id="cancel">Cancelling your subscription</h2>
-        <p>Subscriptions are managed by Stripe. To stop a subscription you have to cancel it inside the <strong>Stripe customer portal</strong> &mdash; this is the only place a cancellation can be made.</p>
+        <p>You can cancel your subscription directly from inside Vehium &mdash; no Stripe portal trip required. The cancellation is scheduled for the end of your current paid period, so you keep full access until then and you&rsquo;re not charged again.</p>
         <ol>
           <li>Open <strong>Settings &rarr; Billing</strong>.</li>
-          <li>Click <strong>Manage subscription</strong>. This opens the Stripe customer portal in a new tab.</li>
-          <li>Click <strong>Cancel plan</strong> and confirm.</li>
-          <li>Your subscription stays active through the paid-through date, then stops automatically.</li>
+          <li>Under <em>Active subscription</em>, click <strong>Cancel subscription</strong>.</li>
+          <li>Confirm in the dialog. The card now reads <em>Subscription scheduled to end</em> with the exact date you lose access.</li>
+          <li>You stay on your plan until that date, then the account moves to <strong>Payment required</strong>.</li>
         </ol>
-        <p>After the period ends the account moves to <strong>Payment required</strong> &mdash; you can still sign in and view existing data, but creating or editing records is locked. See <a href="/workshop/billing/status/">Subscription status</a>. Data retention follows the rules in <a href="/workshop/billing/trial/">the trial article</a>.</p>
+        <p>You won&rsquo;t be charged again. No refund is issued for the unused part of the current period &mdash; you keep access for the time you already paid for.</p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Only workshop admins can cancel</div>
+          <p>The <strong>Cancel subscription</strong> button is only visible to users with the <em>Admin</em> role, since it affects the whole workshop&rsquo;s billing.</p>
+        </div>
+
+        <h2 id="reactivate">Changed your mind? Reactivate before the end date</h2>
+        <p>While the subscription is in the &ldquo;scheduled to end&rdquo; state, you can undo the cancellation in one click:</p>
+        <ol>
+          <li>Open <strong>Settings &rarr; Billing</strong>.</li>
+          <li>On the <em>Subscription scheduled to end</em> card, click <strong>Reactivate subscription</strong>.</li>
+          <li>Confirm in the dialog. Billing resumes on its normal cycle &mdash; your next charge happens on the date you would have otherwise lapsed.</li>
+        </ol>
+        <p>If the period has already ended (the card now shows <em>Payment required</em>), reactivation is no longer available &mdash; just pick a plan again and check out as normal. See <a href="/workshop/billing/status/">Subscription status</a>.</p>
 
         <div class="callout callout-warning">
-          <div class="callout-title">Stripe will keep charging until you cancel</div>
-          <p>If you stop using Vehium but never cancel in the Stripe portal, Stripe will continue charging your card every month for as long as the card stays valid. Signing out, uninstalling the desktop or mobile app, or closing your browser does <strong>not</strong> cancel the subscription &mdash; only the Stripe customer portal does.</p>
+          <div class="callout-title">Your data is kept for 120 days after the period ends</div>
+          <p>After your subscription lapses, your records stay in place but read-only. You&rsquo;ll get reminder emails at <strong>60, 90, and 113 days</strong>. On <strong>day 120</strong> the account and all its data are permanently deleted. Subscribing again at any point before that resets the clock and restores everything &mdash; see <a href="/workshop/billing/trial/#data-retention">data retention</a> for the full timeline.</p>
         </div>
 
         <div class="callout callout-info">
           <div class="callout-title">Deleting your workshop cancels the subscription for you</div>
-          <p>If you <a href="/workshop/settings/delete-workshop/">delete your workshop</a> instead, the Stripe subscription is cancelled automatically &mdash; at the end of the current billing period during the 30-day grace, or immediately if you choose instant deletion. You don&rsquo;t need to cancel in the Stripe portal separately.</p>
+          <p>If you <a href="/workshop/settings/delete-workshop/">delete your workshop</a> instead, the Stripe subscription is cancelled automatically &mdash; at the end of the current billing period during the 30-day grace, or immediately if you choose instant deletion. You don&rsquo;t need to cancel separately.</p>
         </div>
 
         <h2 id="invoices">Invoices &amp; receipts</h2>

@@ -38,8 +38,9 @@ Vehium Workshop (`com.atheod.BurnoutOSPortal`, served at app.vehium.com) is an a
 - **Plans**: picked at Settings → Billing. Pricing shown in live plan cards; canonical pricing at vehium.com/#pricing.
 - **Checkout**: redirects to Stripe-hosted checkout. Card details never touch Vehium.
 - **Managing payment**: change card, view invoices, and pay failed charges from the Stripe customer portal via Settings → Billing → Manage subscription.
-- **Subscription states**: Trial active, Subscription active, Trial ending soon, Payment required.
-- **Data retention**: 30 days after lapse in cold storage; 35 days backups; up to 90 days total recovery if subscribed again.
+- **Cancel/Reactivate (in-app, v3.1.1+)**: workshop admins can click Cancel subscription on Settings → Billing to schedule cancellation at the end of the current paid period (no immediate cut, no refund, no further charges). While in the "scheduled to end" state, the same screen offers Reactivate subscription to undo it. After the period ends, the account moves to Payment required and re-subscription via checkout is required.
+- **Subscription states**: Trial active, Subscription active (incl. "scheduled to end"), Trial ending soon, Payment required.
+- **Data retention after lapse**: account stays read-only and recoverable for 120 days. Reminder emails fire at day 60, 90, and 113. Permanent deletion happens on day 120 (TenantInactivityService → TenantPurgeService). Subscribing again at any point before day 120 cancels the deletion and restores everything; after day 120 the data is gone.
 
 ## Dashboard
 

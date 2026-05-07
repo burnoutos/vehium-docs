@@ -13,16 +13,56 @@
       <article class="content">
         <nav class="breadcrumbs"><a href="/">Docs</a><span class="sep">/</span><a href="/workshop/">Workshop</a><span class="sep">/</span><a href="/workshop/services/">Services</a><span class="sep">/</span><span>Invoices</span></nav>
         <h1>Invoices &amp; PDFs</h1>
-        <p class="lead">Every service can carry an invoice. Create it, add line items, and export as a professional PDF with your workshop header.</p>
+        <p class="lead">Every service can carry an invoice. Build it as a draft, decide who you&rsquo;re billing, add line items with optional discounts, then issue it &mdash; the issued PDF is what you give the customer.</p>
+
+        <h2 id="status">Status flow: Draft &rarr; Issued &rarr; Cancelled</h2>
+        <p>An invoice always has one of three statuses. The status determines what you can do with it:</p>
+        <table>
+          <tr><th>Status</th><th>What it means</th><th>What you can do</th></tr>
+          <tr>
+            <td><strong>Draft</strong></td>
+            <td>Working copy. No invoice number yet, not legally binding.</td>
+            <td>Edit any field, add or remove lines, change the bill-to, delete the whole invoice.</td>
+          </tr>
+          <tr>
+            <td><strong>Issued</strong></td>
+            <td>Given to the customer. Invoice number is assigned at this transition and never reused.</td>
+            <td>Read-only. Download/print the PDF. Cancel via credit-note flow.</td>
+          </tr>
+          <tr>
+            <td><strong>Cancelled</strong></td>
+            <td>Voided after being issued. The original is preserved for the audit trail; the number stays consumed.</td>
+            <td>Read-only. Download/print the PDF (it shows the cancelled status).</td>
+          </tr>
+        </table>
+
+        <div class="callout callout-warning">
+          <div class="callout-title">Issued invoices are legally immutable</div>
+          <p>Once you issue an invoice you can&rsquo;t edit it. To correct a mistake, cancel the invoice and create a new one. The original stays in your invoice register and its number is never reissued.</p>
+        </div>
 
         <h2 id="create">Create an invoice</h2>
         <ol>
           <li>On the service page, scroll to <strong>Invoice</strong>.</li>
-          <li>Click <strong>+ Create invoice</strong>.</li>
-          <li>Start adding line items: name, unit price, quantity, VAT %.</li>
+          <li>Click <strong>+ Create invoice</strong>. A draft is created.</li>
+          <li>Pick the <strong>bill-to</strong> &mdash; the customer who receives the invoice.</li>
+          <li>Add line items: description, unit price, quantity, optional discount, VAT %.</li>
+          <li>Optionally apply an <strong>invoice-level discount</strong> on top.</li>
           <li>Totals (net, VAT, gross) recalculate automatically after each row.</li>
-          <li>Click <strong>Save invoice</strong>.</li>
+          <li>Click <strong>Save</strong> to keep editing, or <strong>Issue invoice</strong> to assign a number and lock it.</li>
         </ol>
+
+        <h2 id="bill-to">Bill-to: individual or company</h2>
+        <p>Pick who the invoice is addressed to. The choice changes which fields appear on the PDF:</p>
+        <ul>
+          <li><strong>Individual</strong> &mdash; bills the linked customer. Name on file is used.</li>
+          <li><strong>Company</strong> &mdash; bills a business. Requires a <strong>VAT number</strong>; the address is included on the PDF.</li>
+        </ul>
+        <p>Pick a customer from your <a href="/workshop/clients/">client list</a> to auto-fill the fields, or switch to <strong>custom mode</strong> to type a one-off bill-to (useful for occasional buyers you don&rsquo;t want to add as a client).</p>
+        <div class="callout callout-info">
+          <div class="callout-title">Bill-to is a snapshot at issue time</div>
+          <p>The customer&rsquo;s name, VAT number, and address are <em>copied onto the invoice</em> when you issue it. Updating the client record later doesn&rsquo;t change already-issued invoices &mdash; the historical record stays accurate.</p>
+        </div>
 
         <h2 id="line-items">Line-item fields</h2>
         <table>
@@ -30,27 +70,38 @@
           <tr><td>Description</td><td>What you charged for &mdash; e.g. <em>Oil change (5W-30 synthetic)</em>.</td></tr>
           <tr><td>Quantity</td><td>Decimal allowed. Default 1.</td></tr>
           <tr><td>Unit price</td><td>Before VAT.</td></tr>
+          <tr><td>Line discount</td><td>Optional. Apply as a <strong>percentage</strong> (0&ndash;100) or a <strong>fixed amount</strong> in your currency.</td></tr>
           <tr><td>VAT %</td><td>Default is pulled from your <a href="/workshop/settings/workshop-profile/">workshop profile</a>. Override per-line if needed.</td></tr>
         </table>
 
-        <h2 id="edit">Editing an existing invoice</h2>
-        <p>Click any existing line to edit it, or click <strong>+ Add line</strong> for a new row. Changes to prices update totals instantly. Use the trash icon to remove a line.</p>
+        <h2 id="discounts">Discounts</h2>
+        <p>Two layers of discount are available, and they stack:</p>
+        <ol>
+          <li><strong>Per-line discount</strong> &mdash; subtract a percentage or amount from a single line. Used for &ldquo;part on sale&rdquo; or &ldquo;loyalty 10% on labour&rdquo;.</li>
+          <li><strong>Invoice-level discount</strong> &mdash; subtract a percentage or amount from the whole invoice subtotal. Used for &ldquo;5% off the total&rdquo; or a fixed-amount goodwill credit.</li>
+        </ol>
+        <p>Each discount is recorded with its type (None / Percentage / Amount) and value, and the breakdown is visible on the PDF so the customer can see what was knocked off.</p>
+
+        <h2 id="edit">Editing a draft</h2>
+        <p>While an invoice is in <strong>Draft</strong>, click any line to edit it, or click <strong>+ Add line</strong> for a new row. Changes to prices, discounts, or VAT update the totals instantly. Use the trash icon to remove a line, or the <strong>Delete invoice</strong> button to throw the whole draft away. Once you click <strong>Issue</strong> the invoice becomes read-only.</p>
 
         <h2 id="pdf">Export as PDF</h2>
-        <p>On any saved invoice, three actions live in the toolbar:</p>
+        <p>On any saved invoice, the toolbar offers:</p>
         <ul>
           <li><strong>Download</strong> &mdash; saves the PDF to your device.</li>
           <li><strong>Print</strong> &mdash; opens the browser print dialog.</li>
           <li><strong>Share</strong> (mobile) &mdash; opens the native share sheet.</li>
         </ul>
-        <p>The PDF includes your <strong>workshop header</strong> (logo, name, VAT, address from your profile), <strong>customer details</strong>, the <strong>vehicle</strong>, the <strong>service description</strong>, the <strong>line items</strong>, and <strong>totals</strong> with VAT breakdown.</p>
+        <p>The PDF includes your <strong>workshop header</strong> (logo, name, VAT, address from your profile), the <strong>bill-to snapshot</strong>, the <strong>vehicle</strong>, the <strong>service description</strong>, the <strong>line items</strong> with discount breakdown, and the <strong>totals</strong> with VAT breakdown by rate.</p>
+        <p>To export many invoices at once &mdash; for an accountant or a monthly archive &mdash; use the workshop-wide <a href="/workshop/invoices/">Invoices screen</a>. It supports bulk CSV (per-VAT-rate columns) and multi-invoice PDF bundles.</p>
 
         <h2 id="vat">VAT handling</h2>
-        <p>VAT is calculated per-line based on the VAT% you entered. The invoice footer shows a breakdown: subtotal by VAT rate, total VAT, grand total. If your workshop has a VAT number set in the profile, it appears on the invoice.</p>
+        <p>VAT is calculated per-line, after any line discount, based on the VAT% you entered. The invoice footer shows the breakdown: subtotal by VAT rate, total VAT, grand total. The default VAT% comes from your <a href="/workshop/settings/workshop-profile/">workshop profile</a> &mdash; change that and every <em>new</em> invoice picks up the new default. Already-issued invoices keep the rates they were issued with.</p>
+        <p>If your workshop has a VAT number set in the profile, it appears on the invoice header. If the bill-to is a VAT-exempt company (e.g. EU reverse charge), the line is exported VAT-exempt and a note appears on the PDF.</p>
 
         <div class="callout callout-warning">
-          <div class="callout-title">Numbering</div>
-          <p>Invoice numbers are assigned sequentially per workshop. Once assigned, they cannot be reused &mdash; deleting an invoice does not free up its number (this matches most legal requirements for invoice registers).</p>
+          <div class="callout-title">Numbering is gap-free and per-tenant</div>
+          <p>Invoice numbers are assigned sequentially per workshop at the moment you click <strong>Issue</strong>. Once assigned, a number cannot be reused &mdash; cancelling an invoice does not free up its number (this matches most legal requirements for invoice registers). The numbering is concurrency-safe: even if two employees issue at the same instant, you get two consecutive numbers, never a duplicate.</p>
         </div>
 
         <div class="pager">

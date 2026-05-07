@@ -15,8 +15,18 @@
         <h1>Release notes</h1>
         <p class="lead">What shipped and when, in reverse chronological order.</p>
 
+        <h2 id="v3-1-1">v3.1.1</h2>
+        <p>Current version. In-app subscription management and invoice polish.</p>
+        <ul>
+          <li><strong>Cancel subscription from inside Vehium</strong> &mdash; no more Stripe portal trip. <em>Settings &rarr; Billing &rarr; Cancel subscription</em> schedules the cancellation for the end of your current paid period. Full access stays on until that date, no further charges.</li>
+          <li><strong>Reactivate with one click</strong> &mdash; while a cancellation is pending, the same screen offers <em>Reactivate subscription</em> to undo it. Billing resumes on its normal cycle. After the period actually ends, just subscribe again as normal. See <a href="/workshop/billing/subscription/#cancel">Cancelling your subscription</a>.</li>
+          <li>Confirmation emails are sent automatically on both cancel and reactivate.</li>
+          <li>Invoice CSV export now uses the <code>dd/MM/yyyy</code> date format for consistency with the on-screen invoice list.</li>
+          <li>Misc bug fixes and polish.</li>
+        </ul>
+
         <h2 id="v3-0-6">v3.0.6</h2>
-        <p>Current version. Maintenance release across all platforms.</p>
+        <p>Maintenance release across all platforms.</p>
         <ul>
           <li>Improved sign-in reliability &mdash; session refresh fixes on slow networks.</li>
           <li>Phone-number fields now accept all international formats consistently.</li>
